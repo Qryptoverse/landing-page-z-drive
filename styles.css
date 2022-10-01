@@ -1,0 +1,195 @@
+@font-face {
+  font-family: Anantason-Black;
+  src: url('./fonts/Anantason-Black.otf');
+}
+
+@font-face {
+  font-family: Anantason-Light;
+  src: url('./fonts/Anantason-Light.otf');
+}
+@font-face {
+  font-family: Anantason-SemiBold;
+  src: url('./fonts/Anantason-SemiBold.otf');
+}
+
+@font-face {
+  font-family: Anantason-Medium;
+  src: url('./fonts/Anantason-Medium.otf');
+}
+
+div {
+  font-family: Anantason-SemiBold;
+}
+p {
+  font-family: Anantason-Light;
+}
+
+.container-1 {
+  width: 100%;
+}
+.content-bg-img-1 {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+}
+.content-bg-img-2 {
+  height: 120rem;
+  width: 100%;
+}
+.content-logo-img-1 {
+  margin-top: 50rem;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-fund {
+  width: 430px;
+  height: 67px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  margin: auto;
+}
+
+.content-text {
+  line-height: 2.5rem;
+  font-size: 1.1rem;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.content-logo-img-2 {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content-logo-img-3 {
+  margin-right: 300px;
+  margin-bottom: 50px;
+  width: 12rem;
+}
+
+.content-text-header-1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 37px;
+  color: white;
+  margin-left: 15rem;
+  margin-bottom: 4rem;
+}
+.content-text-header-2 {
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 37px;
+  color: white;
+  margin-bottom: 10rem;
+  width: 100%;
+}
+.img-part-1 {
+  width: 50%;
+  bottom: 10000px;
+  background-color: aquamarine;
+}
+
+.card-1 {
+  box-sizing: border-box;
+  width: 300px;
+  height: 546px;
+  background: linear-gradient(
+    116.79deg,
+    rgba(255, 255, 255, 0.48) 0%,
+    rgba(255, 255, 255, 0.12) 99.45%
+  );
+  backdrop-filter: blur(50px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 30px;
+}
+.card-2 {
+  /* Glass */
+  width: 300px;
+  height: 546px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    116.79deg,
+    rgba(255, 255, 255, 0.48) 0%,
+    rgba(255, 255, 255, 0.12) 99.45%
+  );
+  backdrop-filter: blur(50px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 30px;
+}
+.card-3 {
+  /* Glass */
+  width: 300px;
+  height: 546px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    116.79deg,
+    rgba(255, 255, 255, 0.48) 0%,
+    rgba(255, 255, 255, 0.12) 99.45%
+  );
+  backdrop-filter: blur(50px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.hidden-component {
+  visibility: hidden;
+}
+
+.part-3-margin {
+  margin-top: 200px;
+}
+
+.position-mobile {
+  position: absolute;
+  top: 500px;
+}
+
+/*--------------------------------slide char-------------------------------*/
+.typed-cursor {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+span {
+  color: #fff;
+}
+
+.font-responsive {
+  font: 1em sans-serif;
+}
+
+/* footer*/
+.document {
+  font-size: 14px;
+}
+
+.menu {
+  font-size: 14px;
+}
+
+.menu2 {
+  font-size: 14px;
+}
+
+.menu3 {
+  font-size: 14px;
+}
+
+.menu4 {
+  font-size: 14px;
+}
+
+.address {
+  width: 300px;
+  font-size: 14px;
+}
