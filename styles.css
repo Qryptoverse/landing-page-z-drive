@@ -37,8 +37,8 @@ p {
   width: 100%;
 }
 .content-logo-img-1 {
-  margin-top: 50rem;
-  width: 70%;
+  margin-top: 73rem;
+  width: 35%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -55,6 +55,20 @@ p {
 .content-text {
   line-height: 2.5rem;
   font-size: 1.1rem;
+}
+
+.bg-color {
+  background-color: rgba(245, 245, 245, 1);
+}
+
+hr.line {
+  border: 1px solid white;
+  color: #fff;
+  width: 44rem;
+}
+
+.vector-line {
+  font-family: 'Anantason-Light';
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
