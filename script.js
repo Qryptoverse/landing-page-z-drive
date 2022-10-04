@@ -51,10 +51,10 @@ window.onload = () => {
 
 const responsive = () => {
   if (window.innerWidth < 1400) {
-    removeComponent();
+    //removeComponent();
     //addFont();
   } else {
-    addComponent();
+    //addComponent();
     //removeFont();
   }
 

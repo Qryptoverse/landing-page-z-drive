@@ -63,7 +63,9 @@ p {
 hr.line {
   border: 1px solid white;
   color: #fff;
-  width: 44rem;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .vector-line {
