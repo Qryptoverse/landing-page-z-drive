@@ -52,24 +52,24 @@ window.onload = () => {
 const responsive = () => {
   if (window.innerWidth < 1400) {
     removeComponent();
-    addFont();
+    //addFont();
   } else {
     addComponent();
-    removeFont();
+    //removeFont();
   }
 
   if (window.innerWidth < 1200) {
-    addBackGround();
+    //addBackGround();
   }
   if (window.innerWidth < 991) {
-    addContentFPPT();
+    addContentCommon();
   }
 
   if (window.innerWidth >= 1200) {
-    removeBackGround();
+    //removeBackGround();
   }
   if (window.innerWidth > 991) {
-    removeContentFPPT();
+    removeContentCommon();
   }
 };
 const removeComponent = () => {
@@ -154,35 +154,53 @@ const removeBackGround = () => {
   element2.classList.remove('position-mobile');
 };
 // reverse component at content fppt
-const addContentFPPT = () => {
-  let element1 = document.getElementById('text-context-fppt-wide');
-  let element2 = document.getElementById('text-context-fppt-mobile');
-  let element3 = document.getElementById('text-context-abbc-mobile');
+const addContentCommon = () => {
+  let element1 = document.getElementById('text-context-service-wide');
+  let element2 = document.getElementById('text-context-service-mobile');
+  let element3 = document.getElementById('text-context-point-mobile');
+  let element4 = document.getElementById('text-context-wallet-wide');
+  let element5 = document.getElementById('text-context-wallet-mobile');
+  let element6 = document.getElementById('network-z-drive');
+
   element1.innerHTML = '';
-  element2.classList.add('text-center', 'content-text');
+  element4.innerHTML = '';
+  element4.innerHTML.p = '';
+  element2.classList.add('text-center');
   element3.classList.add('text-center');
   element2.style.fontSize = '0.75rem';
   element3.style.fontSize = '0.75rem';
-  element2.classList.remove('fs-5');
-  element3.classList.remove('fs-5');
+  element5.style.fontSize = '0.75rem';
+
   element2.innerHTML =
-    'คอร์ แอสเซท มุ่งเน้นบริหารจัดการดิจิตอลแอสเซท<br> <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 0.8rem;">สร้างระบบด้วยแนวคิด FPPT</b><br>เพื่อจัดการบริหารธุรกิจและส่งเสริมการสร้างผลิตภัณฑ์<br>ในเครือของบริษัทคอร์ แอสเซท';
+    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 2rem;">ให้ผู้ใช้บริการแฟลตฟอร์ม </b><br>กระจายความเป็นเจ้าของให้ผู้ใช้บริการแฟลตฟอร์ม <br>สร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล <br> ตลอดอายุสัญญา 365 วัน';
   element3.innerHTML =
-    'ด้วยการนำ <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 0.8rem;">เทคโนโลยี ABBC<br></b>เข้ามาบริหารจัดการธุรกิจ<br>ให้เกิดการ Sharing Economic บน Eco system ของตนเอง เพื่อสร้างสังคม<br>แห่งการแบ่งปันพร้อมทั้งต่อยอดธุรกิจ<br>ในหลากหลายแพลตฟอร์ม ยกระดับธุรกิจให้เติบโต<br>และสร้างรากฐานที่มั่นคง เตรียมศักยภาพความพร้อม<br>ในการแข่งขันที่เพิ่มขึ้นในอนาคต';
+    'ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม <br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 2rem;">สะสม Point รับของรางวัล <br></b>และผลิตภัณฑ์ต่างๆของบริษัท';
+  element5.innerHTML =
+    'Wallet ช่องทางการชำระเงินที่ง่าย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">และเชื่อมต่อกับบริการอื่นๆ';
+  element6.src = '';
 };
 
-const removeContentFPPT = () => {
-  let element1 = document.getElementById('text-context-fppt-wide');
-  let element2 = document.getElementById('text-context-fppt-mobile');
-  let element3 = document.getElementById('text-context-abbc-mobile');
+const removeContentCommon = () => {
+  let element1 = document.getElementById('text-context-service-wide');
+  let element2 = document.getElementById('text-context-service-mobile');
+  let element3 = document.getElementById('text-context-point-mobile');
+  let element4 = document.getElementById('text-context-wallet-wide');
+  let element5 = document.getElementById('text-context-wallet-mobile');
+  let element6 = document.getElementById('network-z-drive');
+
   element1.classList.remove('text-center');
-  element2.classList.remove('text-center', 'content-text');
+  element2.classList.remove('text-center');
   element3.classList.remove('text-center');
-  element2.classList.add('fs-5');
-  element3.classList.add('fs-5');
   element2.innerHTML = '';
+  element5.innerHTML = '';
   element1.innerHTML =
-    ' คอร์ แอสเซท มุ่งเน้นบริหารจัดการดิจิตอลแอสเซท<br>   <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 1.5rem;">สร้างระบบด้วยแนวคิด FPPT </b><br>เพื่อจัดการบริหารธุรกิจและส่งเสริมการสร้างผลิตภัณฑ์<br>ในเครือของบริษัทคอร์ แอสเซท';
+    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแฟลตฟอร์ม</b><br>กระจายความเป็นเจ้าของให้ผู้ใช้บริการแฟลตฟอร์ม <br>สร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล <br> ตลอดอายุสัญญา 365 วัน';
   element3.innerHTML =
-    'ด้วยการนำ <b style="color:rgba(15, 26, 92, 1); font-family: Anantason-Medium; font-size: 1.5rem;">เทคโนโลยี ABBC</b><br>เข้ามาบริหารจัดการธุรกิจให้เกิดการ Sharing Economic บน Eco system<br>ของตนเอง เพื่อสร้างสังคมแห่งการแบ่งปัน<br>พร้อมทั้งต่อยอดธุรกิจในหลากหลายแพลตฟอร์ม ยกระดับธุรกิจให้เติบโต<br>และสร้างรากฐานที่มั่นคง เตรียมศักยภาพความพร้อมในการแข่งขัน<br>ที่เพิ่มขึ้นในอนาคต';
+    'ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม <br><b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะสม Point รับของรางวัล <br></b>และผลิตภัณฑ์ต่างๆของบริษัท';
+  element4.innerHTML =
+    'Wallet ช่องทางการชำระเงินที่ง่าย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">และเชื่อมต่อกับบริการอื่นๆ';
+  element1.style.lineHeight = '4rem';
+  element3.style.lineHeight = '4rem';
+
+  element6.src = './images/part-4/p4.png';
 };
