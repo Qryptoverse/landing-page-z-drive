@@ -18,15 +18,14 @@
 <body>
     <div class="bg-color">
         <!----------------- Navbar ------------------->
-        <div class="" style="z-index: 2; width: 100%;">
+        <div class="position-fixed" style="z-index: 2; width: 100%;">
             <nav class="navbar navbar-expand-lg navbar-dark navbar-color "
                 style="background-color:rgba(103, 142, 241, 1)">
                 <div class="container-fluid ">
                     <a class="navbar-brand" href="#home">
                         <img src=".\images/logo/logozdrive.png" alt="" width="204" height="57"
                             class="d-inline-block align-text-top justify-content-start  img-fluid"
-                            style="margin-left: 60px;">
-
+                            style="margin-left: 60px;" id="img-logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,8 +59,8 @@
         <!-------------------- Part 1 Intro------------------->
         <div class="position-relative" id=" home">
             <img src="./images/part-1/bg1.png" width="100%" height="1000px">
-            <div class="content-part-1">
-                <img src="./images/logo/logobig.png" class="img-fluid content-logo-img-1"
+            <div class="content-part-1" id="id-content-1">
+                <img src="./images/logo/logobig.png" class="img-fluid content-logo-img-1 fade-in-image"
                     style="height: auto; width: auto;">
 
                 <p class="text-center text-white mt-4 content-text">
@@ -70,8 +69,8 @@
                     จัดเก็บข้อมูลทางอิเล็กทรอนิกส์ ด้วยการนำเทคโนโลยี ABBC (เอดับเบิ้ลบีซี)<br>
                     <b> เข้ามาบริหารจัดการพื้นที่จัดเก็บข้อมูล ให้ตรงตามความต้องการของผู้ใช้งานกลุ่มเฉพาะ</b>
                 </p>
-                <div class="box-fund mt-5 d-flex align-items-center justify-content-center p-2"
-                    style="height: auto; width: 22rem;">
+                <div class="box-fund mt-5 d-flex align-items-center justify-content-center p-2 img-fluid"
+                    style="height: 4rem; width: 24rem;">
                     <span style="font-family: Anantason-Light;" class="fs-4">
                         Discovery zdrive.fund
                     </span>
@@ -86,7 +85,7 @@
             <div
                 class="d-lg-inline-flex justify-content-between justify-content-lg-center justify-content-md-center col-lg-12 mb-0 bg-color">
                 <div class="p-2 align-self-center mx-4 ">
-                    <p class="text-start fs-4 content-text" id="text-context-service-wide"
+                    <p class="text-start fs-4 content-text " id="text-context-service-wide"
                         style="color:rgba(120, 120, 120, 1) ;">
                         กระจายความเป็นเจ้าของ<br><br>
                         <b
@@ -97,8 +96,8 @@
                     </p>
                 </div>
                 <div class="mx-2 align-self-center d-flex justify-content-md-center">
-                    <img src="./images/part-2/Group 7420.png" alt="" class="img-fluid"
-                        style="height: auto; width: auto;">
+                    <img src="./images/part-2/Group 7420.png" alt="" class="img-fluid "
+                        style="height: auto; width: auto;" id="image2-1">
                 </div>
 
                 <div class="p-2 align-self-center mx-5">
@@ -113,7 +112,7 @@
 
                 <div class="p-2 align-self-start mx-3 d-flex justify-content-md-center">
                     <img src=" ./images/part-2/Group 7421.png" alt="" class="img-fluid"
-                        style="height: auto; width: auto;" ;margin-top: 300px;">
+                        style="height: auto; width: auto ;" id="image2-2">
                 </div>
 
                 <div class="p-2 align-self-center mx-5">
@@ -138,7 +137,7 @@
 
             </div>
             <div class="d-flex justify-content-center">
-                <img src="./images/part-3/Group 7427.png" class="img-fluid">
+                <img src="./images/part-3/Group 7427.png" class="img-fluid" id="image3-1">
             </div>
 
             <div class="text-center">
@@ -151,10 +150,10 @@
             <div class="d-flex align-items-center justify-content-center"
                 style="background:linear-gradient(180deg, #6876F0 0%, #65AFF0 100%); height: 735px;">
                 <div class="">
-                    <img src="./images/part-4/p4.png" alt="" class="img-fluid" id="network-z-drive">
+                    <img src="./images/part-4/p4.png" alt="" class="img-fluid" id="network-z-drive" id="image4-1">
                 </div>
                 <div>
-                    <img src="./images/part-4/Group 7423.png" alt="" class="img-fluid">
+                    <img src="./images/part-4/Group 7423.png" alt="" class="img-fluid" id="image4-2">
                 </div>
             </div>
 
@@ -162,7 +161,8 @@
             <!------------------ Part 5 Content ---------------------->
             <div class="d-flex flex-column justify-content-center bg-color" style="height: 60rem; ">
                 <div>
-                    <img src="./images/part-5/Group 7425.png" alt="" style="margin-top:10rem ;" class="img-fluid">
+                    <img src="./images/part-5/Group 7425.png" alt="" style="margin-top:10rem ;" class="img-fluid"
+                        id="image5-1">
                 </div>
                 <div class="text-center mt-5" style="color:rgba(120, 120, 120, 1) ;">
                     <p class="fs-2">รองรับทุกอุปกรณ์การใช้งาน</p>
@@ -175,19 +175,20 @@
             <div class="d-flex flex-column align-items-center bg-color text-center "
                 style="background-image: url(./images/part-6/bg6.png);height: 70rem; width: 100%;">
                 <div>
-                    <img src="./images/part-6/Group 7448.png" alt="" style="margin-top:20rem ;">
+                    <img src="./images/part-6/Group 7448.png" alt="" style="margin-top:20rem ;" class="img-fluid"
+                        id="image6-1">
                 </div>
                 <div style="height: 4rem;">
                 </div>
-                <div class="mt-4">
-                    <p class="fs-2 text-white" style="font-family: Anantason-Medium;">Z.drive
+                <div class="mt-4  font-responsive-1">
+                    <p class="fs-2 text-white  font-responsive-1" style="font-family: Anantason-Medium;">Z.drive
                         ทางเลือกใหม่ของการสร้างรายได้
                     </p>
-                    <div class="fs-1 text-white">จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล</div>
+                    <div class="fs-1 text-white  font-responsive-1">จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล</div>
                 </div>
                 <hr class="line">
                 <p class="text-white fs-4 my-3  mb-5">มาร่วมเป็น 1 ในคอมมูนิตี้ล้ำสมัย</p>
-                <p class="text-white fs-1" style="font-family: Anantason-SemiBold;letter-spacing: 10px;">
+                <p class="text-white font-responsive-1" style="font-family: Anantason-SemiBold;letter-spacing: 1vw;">
                     <span class="vector-line">
                         &#10072</span> Buy <span class="vector-line"> &#10072</span> Sell <span class="vector-line">
                         &#10072</span> Tell
@@ -202,8 +203,8 @@
                     <div class="d-lg-inline-flex justify-content-between " style="width: 100%;">
                         <div class="mx-1 mt-3 text-center justify-content-start">
 
-                            <img src="./images/logo/logobig.png " class="justify-content-start  d-flex" width="273px"
-                                height="100px left-173px top-3960px">
+                            <img src="./images/logo/logobig.png " class="justify-content-start img-fluid d-flex"
+                                width="273px" height="100px left-173px top-3960px">
 
 
                             <br>

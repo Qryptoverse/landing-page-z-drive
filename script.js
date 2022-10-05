@@ -4,6 +4,7 @@ window.onscroll = () => {
 };
 
 const scrollFunction = () => {
+  console.log(document.documentElement.scrollTop);
   const onActiveMenu = (name) => {
     elementsName.forEach((item) => {
       let element = document.getElementById(item);
@@ -15,29 +16,62 @@ const scrollFunction = () => {
     });
   };
 
+  let element1 = document.getElementById('image2-1');
+  let element2 = document.getElementById('image2-2');
+  let element3 = document.getElementById('image3-1');
+  let element4 = document.getElementById('network-z-drive');
+  let element5 = document.getElementById('image4-2');
+  let element6 = document.getElementById('image5-1');
+  let element7 = document.getElementById('image6-1');
   //list menu
   let elementsName = ['home-nav', 'company-nav', 'product-nav', 'contact-nav'];
-  //home
-  if (document.documentElement.scrollTop < 881) {
+  //home part1
+  if (document.documentElement.scrollTop < 200) {
     onActiveMenu('home-nav');
   }
-  //company
+  //company part2
   else if (
-    document.documentElement.scrollTop > 880 &&
-    document.documentElement.scrollTop < 1683
+    document.documentElement.scrollTop >= 400 &&
+    document.documentElement.scrollTop < 1000
   ) {
     onActiveMenu('company-nav');
+    element1.classList.add('fade-in-image');
   }
-  //product
+  //product part3
   else if (
-    document.documentElement.scrollTop > 1683 &&
-    document.documentElement.scrollTop < 2000
+    document.documentElement.scrollTop > 1000 &&
+    document.documentElement.scrollTop < 2200
   ) {
     onActiveMenu('product-nav');
+    element2.classList.add('fade-in-image');
   }
-  //contact
-  else if (document.documentElement.scrollTop > 2000) {
+  //contact part4
+  else if (
+    document.documentElement.scrollTop > 2200 &&
+    document.documentElement.scrollTop < 3200
+  ) {
     onActiveMenu('contact-nav');
+    element3.classList.add('fade-in-image');
+    //part5
+  } else if (
+    document.documentElement.scrollTop > 3200 &&
+    document.documentElement.scrollTop < 3900
+  ) {
+    //part6
+    element4.classList.add('fade-in-image');
+    element5.classList.add('fade-in-image');
+    //part7
+  } else if (
+    document.documentElement.scrollTop > 3900 &&
+    document.documentElement.scrollTop < 5000
+  ) {
+    element6.classList.add('fade-in-image');
+    //part7
+  } else if (
+    document.documentElement.scrollTop > 5000 &&
+    document.documentElement.scrollTop < 6000
+  ) {
+    element7.classList.add('fade-in-image');
   }
 };
 //size screnn for change
@@ -155,39 +189,42 @@ const removeBackGround = () => {
 };
 // reverse component at content fppt
 const addContentCommon = () => {
+  addLogo();
   let element1 = document.getElementById('text-context-service-wide');
   let element2 = document.getElementById('text-context-service-mobile');
   let element3 = document.getElementById('text-context-point-mobile');
   let element4 = document.getElementById('text-context-wallet-wide');
   let element5 = document.getElementById('text-context-wallet-mobile');
   let element6 = document.getElementById('network-z-drive');
+  let element7 = document.getElementById('id-content-1');
 
   element1.innerHTML = '';
   element4.innerHTML = '';
   element4.innerHTML.p = '';
-  element2.classList.add('text-center');
-  element3.classList.add('text-center');
-  element2.style.fontSize = '0.75rem';
-  element3.style.fontSize = '0.75rem';
-  element5.style.fontSize = '0.75rem';
-
+  element2.classList.add('text-center', 'content-text');
+  element3.classList.add('text-center', 'content-text');
+  element2.style.fontSize = '0.65rem';
+  element3.style.fontSize = '0.65rem';
+  element5.style.fontSize = '0.65rem';
+  element7.style.top = '10rem';
   element2.innerHTML =
-    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 2rem;">ให้ผู้ใช้บริการแฟลตฟอร์ม </b><br>กระจายความเป็นเจ้าของให้ผู้ใช้บริการแฟลตฟอร์ม <br>สร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล <br> ตลอดอายุสัญญา 365 วัน';
+    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">ให้ผู้ใช้บริการแฟลตฟอร์ม </b><br>กระจายความเป็นเจ้าของให้ผู้ใช้บริการแฟลตฟอร์ม <br>สร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล <br> ตลอดอายุสัญญา 365 วัน';
   element3.innerHTML =
-    'ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม <br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 2rem;">สะสม Point รับของรางวัล <br></b>และผลิตภัณฑ์ต่างๆของบริษัท';
+    'ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม <br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">สะสม Point รับของรางวัล <br></b>และผลิตภัณฑ์ต่างๆของบริษัท';
   element5.innerHTML =
     'Wallet ช่องทางการชำระเงินที่ง่าย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">และเชื่อมต่อกับบริการอื่นๆ';
   element6.src = '';
 };
 
 const removeContentCommon = () => {
+  removeLogo();
   let element1 = document.getElementById('text-context-service-wide');
   let element2 = document.getElementById('text-context-service-mobile');
   let element3 = document.getElementById('text-context-point-mobile');
   let element4 = document.getElementById('text-context-wallet-wide');
   let element5 = document.getElementById('text-context-wallet-mobile');
   let element6 = document.getElementById('network-z-drive');
-
+  let element7 = document.getElementById('id-content-1');
   element1.classList.remove('text-center');
   element2.classList.remove('text-center');
   element3.classList.remove('text-center');
@@ -203,4 +240,15 @@ const removeContentCommon = () => {
   element3.style.lineHeight = '4rem';
 
   element6.src = './images/part-4/p4.png';
+  element7.style.top = '15rem';
+};
+
+const addLogo = () => {
+  let logo = document.getElementById('img-logo');
+  logo.style.marginLeft = '00px';
+};
+
+const removeLogo = () => {
+  let logo = document.getElementById('img-logo');
+  logo.style.marginLeft = '60px';
 };
