@@ -4,7 +4,6 @@ window.onscroll = () => {
 };
 
 const scrollFunction = () => {
-  console.log(document.documentElement.scrollTop);
   const onActiveMenu = (name) => {
     elementsName.forEach((item) => {
       let element = document.getElementById(item);
