@@ -196,6 +196,7 @@ const addContentCommon = () => {
   let element5 = document.getElementById('text-context-wallet-mobile');
   //let element6 = document.getElementById('network-z-drive');
   let element7 = document.getElementById('id-content-1');
+  let element8 = document.getElementById('id-bg1');
 
   element1.innerHTML = '';
   element4.innerHTML = '';
@@ -213,10 +214,13 @@ const addContentCommon = () => {
   element5.innerHTML =
     'Wallet ช่องทางการชำระเงินที่ง่าย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">และเชื่อมต่อกับบริการอื่นๆ';
   //element6.src = '';
+
+  element8.src = './images/part-1/BG1-m.png';
 };
 
 const removeContentCommon = () => {
   removeLogo();
+
   let element1 = document.getElementById('text-context-service-wide');
   let element2 = document.getElementById('text-context-service-mobile');
   let element3 = document.getElementById('text-context-point-mobile');
@@ -224,6 +228,7 @@ const removeContentCommon = () => {
   let element5 = document.getElementById('text-context-wallet-mobile');
   //let element6 = document.getElementById('network-z-drive');
   let element7 = document.getElementById('id-content-1');
+  let element8 = document.getElementById('id-bg1');
   element1.classList.remove('text-center');
   element2.classList.remove('text-center');
   element3.classList.remove('text-center');
@@ -240,6 +245,7 @@ const removeContentCommon = () => {
 
   //element6.src = './images/part-4/p4.png';
   element7.style.top = '15rem';
+  element8.src = './images/part-1/bg1.png';
 };
 
 const addLogo = () => {
