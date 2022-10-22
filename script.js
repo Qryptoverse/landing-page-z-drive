@@ -208,7 +208,7 @@ const addContentCommon = () => {
   element5.style.fontSize = '0.65rem';
   element7.style.top = '10rem';
   element2.innerHTML =
-    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับกิจกรรม และสร้างรายได้ จากการถือครองพื้นจัดเก็บในยุคดิจิทัล <br> ตลอด 365 วัน';
+    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับกิจกรรม และสร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล <br> ตลอด 365 วัน';
   element3.innerHTML =
     'ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม <br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">สะสม Point รับของรางวัล <br></b>และผลิตภัณฑ์ต่างๆของบริษัท';
   element5.innerHTML =
