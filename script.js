@@ -235,7 +235,7 @@ const removeContentCommon = () => {
   element2.innerHTML = '';
   element5.innerHTML = '';
   element1.innerHTML =
-    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับกิจกรรม และสร้างรายได้ จากการถือครองพื้นจัดเก็บในยุคดิจิทัล<br> ตลอดอายุสัญญา 365 วัน';
+    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับกิจกรรม และสร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล<br> ตลอดอายุสัญญา 365 วัน';
   element3.innerHTML =
     'ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม <br><b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะสม Point รับของรางวัล <br></b>และผลิตภัณฑ์ต่างๆของบริษัท';
   element4.innerHTML =
