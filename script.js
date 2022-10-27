@@ -16,8 +16,11 @@ const scrollFunction = () => {
   };
 
   let element1 = document.getElementById('image2-1');
+  let element1v2 = document.getElementById('text-context-service-wide');
   let element2 = document.getElementById('image2-2');
+  let element2v2 = document.getElementById('image2-2v2');
   let element3 = document.getElementById('image3-1');
+  let element3v2 = document.getElementById('image3-1v2');
   let element4 = document.getElementById('network-z-drive');
   let element5 = document.getElementById('image4-2');
   let element6 = document.getElementById('image5-1');
@@ -35,6 +38,7 @@ const scrollFunction = () => {
   ) {
     onActiveMenu('company-nav');
     element1.classList.add('fade-in-image');
+	element1v2.classList.add('fade-in-image5');
   }
   //product part3
   else if (
@@ -42,7 +46,9 @@ const scrollFunction = () => {
     document.documentElement.scrollTop < 2200
   ) {
     onActiveMenu('product-nav');
-    element2.classList.add('fade-in-image');
+    element2.classList.add('fade-in-image2');
+	element2v2.classList.add('fade-in-image5');
+	element3v2.classList.add('fade-in-image5');
   }
   //contact part4
   else if (
@@ -50,14 +56,14 @@ const scrollFunction = () => {
     document.documentElement.scrollTop < 3200
   ) {
     onActiveMenu('contact-nav');
-    element3.classList.add('fade-in-image');
+    element3.classList.add('fade-in-image3');
     //part5
   } else if (
     document.documentElement.scrollTop > 3200 &&
     document.documentElement.scrollTop < 3900
   ) {
     //part6
-    element4.classList.add('fade-in-image');
+    element4.classList.add('fade-in-image3');
     element5.classList.add('fade-in-image');
     //part7
   } else if (
@@ -70,7 +76,7 @@ const scrollFunction = () => {
     document.documentElement.scrollTop > 5000 &&
     document.documentElement.scrollTop < 6000
   ) {
-    element7.classList.add('fade-in-image');
+    element7.classList.add('fade-in-image4');
   }
 };
 //size screnn for change
@@ -208,11 +214,11 @@ const addContentCommon = () => {
   element5.style.fontSize = '0.65rem';
   element7.style.top = '10rem';
   element2.innerHTML =
-    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับกิจกรรม และสร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล <br> ตลอด 365 วัน';
+    'มอบสิทธิ์ความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br> ด้วยการถือครองดิจิทัลแอสเซทตลอด 365 วัน';
   element3.innerHTML =
-    'ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม <br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">สะสม Point รับของรางวัล <br></b>และผลิตภัณฑ์ต่างๆของบริษัท';
+    'ร่วมสนุกกับแคมเปญพิเศษ <br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">สะสม Point รับของรางวัล <br></b>และสิทธิพิเศษอื่นๆ จากบริษัท*';
   element5.innerHTML =
-    'Wallet ช่องทางการชำระเงินที่ง่าย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">และเชื่อมต่อกับบริการอื่นๆ';
+    'Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ';
   //element6.src = '';
 
   element8.src = './images/part-1/BG1-m.png';
@@ -235,11 +241,11 @@ const removeContentCommon = () => {
   element2.innerHTML = '';
   element5.innerHTML = '';
   element1.innerHTML =
-    'กระจายความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับกิจกรรม และสร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล<br> ตลอดอายุสัญญา 365 วัน';
+    'มอบสิทธิ์ความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br> ด้วยการถือครองดิจิทัลแอสเซทตลอด 365 วัน';
   element3.innerHTML =
-    'ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม <br><b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะสม Point รับของรางวัล <br></b>และผลิตภัณฑ์ต่างๆของบริษัท';
+    'ร่วมสนุกกับแคมเปญพิเศษ <br><b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะสม Point รับของรางวัล <br></b>และสิทธิพิเศษอื่นๆ จากบริษัท*';
   element4.innerHTML =
-    'Wallet ช่องทางการชำระเงินที่ง่าย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">และเชื่อมต่อกับบริการอื่นๆ';
+    'Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ';
   element1.style.lineHeight = '4rem';
   element3.style.lineHeight = '4rem';
 
