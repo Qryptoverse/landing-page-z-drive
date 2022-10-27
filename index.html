@@ -6,19 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZDrive</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-    <script src="script.js"></script>
+    <script src="script.js?v=1.2"></script>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet' href='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css'>
+	<link rel="stylesheet" href="./animation.css">
+	<style>
+	.cookie1 {
+		-webkit-animation-duration: 10s;
+            animation-duration: 10s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+	}
+	@-webkit-keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateX(-20px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateX(0);
+            }
+         }
+         
+         @keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+               transform: translateX(-20px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(0);
+            }
+         }
+         
+         .fadeInLeft {
+         -webkit-animation-name: fadeInLeft;
+         animation-name: fadeInLeft;
+         } 
+         animation-name: fadeInDown;
+	</style>
 </head>
 
 <body>
     <div class="bg-color">
         <!----------------- Navbar ------------------->
-        <div class="position-fixed" style="z-index: 2; width: 100%;">
+        <div class="position-fixed" style="z-index: 2; width: 100%;" >
             <nav class="navbar navbar-expand-lg navbar-dark navbar-color "
                 style="background-color:rgba(103, 142, 241, 1)">
                 <div class="container-fluid">
@@ -36,16 +74,16 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item  mx-5">
-                                <a id="home-nav" class="nav-link active" aria-current="page" href="#home"
+                                <a id="home-nav" class="nav-link active" aria-current="page" href="#Home"
                                     style="font-family: Anantason-Light;">Home</a>
                             </li>
-                            <li class="nav-item mx-5">
-                                <a id="company-nav" class="nav-link" href="#company"
-                                    style="font-family: Anantason-Light;">Company</a>
+							<li class="nav-item mx-5">
+                                <a id="product-nav" class="nav-link" href="#Product"
+                                    style="font-family: Anantason-Light;">Product</a>
                             </li>
                             <li class="nav-item mx-5">
-                                <a id="product-nav" class="nav-link" href="#product"
-                                    style="font-family: Anantason-Light;">Product</a>
+                                <a id="company-nav" class="nav-link" href="#Campaign"
+                                    style="font-family: Anantason-Light;">Campaign</a>
                             </li>
                             <li class="nav-item mx-5">
                                 <a id="contact-nav" class="nav-link" href="#contact"
@@ -60,46 +98,51 @@
                 </div>
             </nav>
         </div>
-        <!-------------------- Part 1 Intro------------------->
-        <div class="position-relative" id="home">
-            <img src="./images/part-1/bg1.png" width="100%" height="1000px" id="id-bg1">
+		<!-- test -->
+		
+		<div id="large-header" class="large-header" id="Home">
+        <!-------------------- Part 1 Intro------------------->		
+			<!-- animation -->
+			<!-- <canvas id="demo-canvas"></canvas>-->
+            <!--<img src="./images/part-1/bg1.png" width="100%" height="1000px" id="id-bg1">-->
             <div class="content-part-1" id="id-content-1">
-                <img src="./images/logo/logobig.png" class="img-fluid content-logo-img-1 fade-in-image">
+                <img src="./images/logo/logobig.png" class="img-fluid content-logo-img-1 fade-in-image4">
 
                 <p class="text-center text-white mt-4 content-text">
-                    <b>ZDrive แพลตฟอร์ม โดย บริษัท คอร์ แอสเซท จำกัด</b>
-                    บริหารจัดการดิจิตอลแอสเซทบริการให้เช่าพื้นที่<br>
-                    จัดเก็บข้อมูลทางอิเล็กทรอนิกส์ ด้วยการนำเทคโนโลยี ABBC<br>
-                    <b> เข้ามาบริหารจัดการพื้นที่จัดเก็บข้อมูล ให้ตรงตามความต้องการของผู้ใช้งานกลุ่มเฉพาะ</b>
+                    <b class="fade-in-image5">ZDrive แพลตฟอร์ม โดย บริษัท คอร์ แอสเซท จำกัด</b><br>
+                    <span class="fade-in-image">บริหารจัดการดิจิตอลแอสเซท จัดเก็บข้อมูลทางอิเล็กทรอนิกส์</span><br>
+                  <span class="fade-in-image2"> ด้วยการนำเทคโนโลยี ABBC ให้ตรงตามความต้องการของผู้ใช้งานกลุ่มเฉพาะ</span>
                 </p>
-                <div class="box-fund mt-5 d-flex align-items-center justify-content-center p-2 img-fluid"
+                <div class="box-fund mt-5 d-flex align-items-center justify-content-center p-2 img-fluid fade-in-image5"
                     style="height: 4rem; width: 24rem;">
                     <span style="font-family: Anantason-Light;" class="fs-4">
                         Discovery zdrive.fund
                     </span>
                     <span class="mx-4">
-                        <img src="./images/part-1/Group (6).png">
+                        <img src="./images/part-1/Group (6).png" >
                     </span>
                 </div>
             </div>
         </div>
         <!---------------------- Part 2 Vision----------------------->
-        <div class="position-relative" id="company" >
+        <div class="position-relative" id="Product" >
+		<!-- animation running -->
+		<!--<div id="particles-js"></div>-->
             <div
-                class="d-lg-inline-flex justify-content-between justify-content-lg-center justify-content-md-center col-lg-12 mb-0 bg-color">
-                <div class="p-2 align-self-center mx-4 ">
+                class="d-lg-inline-flex justify-content-between justify-content-lg-center justify-content-md-center col-lg-12 mb-0 bg-color" style="padding-bottom: 200px;">
+                <div class="p-2 align-self-center mx-4" >
                     <p class="text-start fs-4 content-text " id="text-context-service-wide"
-                        style="color:rgba(120, 120, 120, 1) ;">
-                        กระจายความเป็นเจ้าของ<br><br>
+                        style="color:rgba(120, 120, 120, 1) ;" >
+                        <span class="">มอบสิทธิ์ความเป็นเจ้าของ</span><br><br>
                         <b
                             style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแฟลตฟอร์ม</b><br><br>
-                        ร่วมสนุกกับกิจกรรม และสร้างรายได้ จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล<br>
-                        ตลอด 365 วัน
+                        ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br>
+                        ด้วยการถือครองดิจิทัลแอสเซทตลอด 365 วัน
                     </p>
                 </div>
                 <div class="mx-2 align-self-center d-flex justify-content-md-center">
-                    <img src="./images/part-2/Group 7420.png" alt="" class="img-fluid "
-                        style="height: auto; width: auto;" id="image2-1">
+                    <img src="./images/part-2/Group 7420.png" alt="" class="img-fluid"
+                        style="height: auto; width: auto;" id="image2-1"><!-- id="image2-1" -->
                 </div>
                 <div class="p-2 align-self-center mx-5">
                     <p class="text-start fs-5 " id="text-context-service-mobile">
@@ -107,35 +150,35 @@
                 </div>
             </div>
             <div class="d-lg-inline-flex bd-highlight justify-content-md-center ustify-content-lg-center col-lg-12 mb-0 bg-color"
-                style="background-image: url(./images/part-2/bg2.png); height: 100%;">
+                style="background-image: url(./images/part-2/bg2.png); height: 100%;padding-bottom: 300px;" id="Campaign">
 
                 <div class="p-2 align-self-center mx-3 d-flex justify-content-md-center">
                     <img src=" ./images/part-2/Group 7421.png" alt="" class="img-fluid"
-                        style="height: auto; width: auto ;" id="image2-2">
+                        style="height: auto; width: auto ;background-position: center top;background-size: 100% 100%;" id="image2-2"><!-- id="image2-2" -->
                 </div>
-                <div class="p-2 align-self-center mx-5">
+                <div class="p-2 align-self-center mx-5" id="image2-2v2">
                     <p class="text-end fs-4 content-text" id="text-context-point-mobile"
                         style="color: rgba(120, 120, 120, 1);">
-                        ร่วมสนุกกิจกรรมประจำแพลตฟอร์ม<br><br>
+                        ร่วมสนุกกับแคมเปญพิเศษ<br><br>
                         <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะสม
-                            Point รับของรางวัล </b> <br><br> และผลิตภัณฑ์ต่างๆของบริษัท
+                            Point รับของรางวัล </b> <br><br> และสิทธิพิเศษอื่นๆ จากบริษัท*
                     </p>
                 </div>
             </div>
         </div>
         <!------------------ Part 3 Wallet ---------------------->
-        <div id="product" style="height:1100px;" class="bg-color">
-            <div class="text-center">
-                <p class="fs-2" id="text-context-wallet-wide" style="color: rgba(120, 120, 120, 1);">Wallet
-                    ช่องทางการชำระเงินที่ง่าย <br> <b class="fs-1" style="color:rgba(90, 142, 248, 1)">สะดวก
+        <div  style="height:1100px;" class="bg-color">
+            <div class="text-center" id="image3-1v2" >
+                <p class="fs-2" id="text-context-wallet-wide" style="color: rgba(120, 120, 120, 1);line-height: 4rem;">Wallet
+                    Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1" style="color:rgba(90, 142, 248, 1);line-height: 3rem;">สะดวก
                         ในการเข้าใช้แพลตฟอร์ม </b>
-                    <b class="fs-3">และเชื่อมต่อกับบริการอื่นๆ </b>
+                    <b class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ </b>
                 </p>
 
 
             </div>
-            <div class="d-flex justify-content-center">
-                <img src="./images/part-3/Group 7427.png" class="img-fluid" id="image3-1" style="margin-left: auto;margin-right: auto;display: block;">
+            <div class="d-flex justify-content-center zoom-in-out-box">
+                <img src="./images/part-3/Group 7427.png" class="img-fluid" id="image3-1" style="margin-left: auto;margin-right: auto;display: block;"><!-- image3-1 -->
             </div>
 
             <div class="text-center">
@@ -148,17 +191,17 @@
             <div class="d-sm-flex align-items-center justify-content-center"
                 style="background:linear-gradient(180deg, #6876F0 0%, #65AFF0 100%); height: 1000px;">
                 <div class="my-5" style="padding-top:50px;">
-                    <img src="./images/part-4/p4.png" alt="" class="img-fluid" width="90%" style="margin-left: auto;margin-right: auto;display: block;" id="network-z-drive" id="image4-1">
+                    <img src="./images/part-4/p4.png" alt="" class="img-fluid" width="90%" style="margin-left: auto;margin-right: auto;display: block;" id="network-z-drive"><!-- network-z-drive image4-1 -->
                 </div>
                 <div style="padding-top:50px;">
-                    <img src="./images/part-4/Group 7423.png" alt="" width="90%" class="img-fluid" id="image4-2" style="margin-left: auto;margin-right: auto;display: block;">
+                    <img src="./images/part-4/Group 7423.png" alt="" width="90%" class="img-fluid zoom-in-out-box2" id="image4-2" style="margin-left: auto;margin-right: auto;display: block;"><!-- image4-2 -->
                 </div>
             </div>
             <!------------------ Part 5 Content ---------------------->
             <div class="d-flex flex-column justify-content-center bg-color col-12" style="height: 60rem;">
                 <div class="justify-content-center">
                     <img src="./images/part-5/Group 7425.png" width="70%" alt="" style="margin-top:10rem ;margin-left: auto;margin-right: auto;display: block;" class="img-fluid"
-                        id="image5-1">
+                        id=""><!-- image5-1 -->
                 </div>
                 <div class="text-center mt-5" style="color:rgba(120, 120, 120, 1) ;">
                     <p class="fs-2">รองรับทุกอุปกรณ์การใช้งาน</p>
@@ -168,7 +211,7 @@
             </div>
             <!------------------ Part 6 Outro ---------------------->
             <div class="d-flex flex-column align-items-center bg-color text-center "
-                style="background-image: url(./images/part-6/bg6.png);height: 70rem; ">
+                style="background-image: url(./images/part-6/bg6.png);background-position: center top;background-size: 100% 100%;padding-bottom: 100px;">
                 <div>
                     <img src="./images/part-6/Group 7448.png" width="75%" alt="" style="margin-top:20rem ;" class="img-fluid"
                         id="image6-1">
@@ -177,10 +220,10 @@
                 </div>
                 <div class="mt-4  font-responsive-1">
                     <p class="fs-3 text-white  font-responsive-1" style="font-family: Anantason-Medium;">ZDrive
-                        ทางเลือกใหม่ของการสร้างรายได้
+                        ทางเลือกใหม่ของการร่วมแคมเปญ และรับรางวัล
                     </p>
                     <div class="text-white  font-responsive-1" style="font-size: 2.5rem;">
-                        จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล</div>
+                        จากการถือครองดิจิตอลแอสเซท</div>
                 </div>
                 <hr class="line">
                 <p class="text-white fs-4 my-3  mb-5">มาร่วมเป็น หนึ่ง ในคอมมูนิตี้ล้ำสมัย</p>
@@ -197,14 +240,14 @@
                             <img src="./images/logo/logobig.png " class="justify-content-start img-fluid d-flex"
                                 width="192px" height="39px left-173px top-3960px">
                             <br>
-                            <p class="text-start">บริการให้เช่าพื้นที่จัดเก็บข้อมูลทางอิเล็กทรอนิกส์<br>
-
+                            <p class="text-start" style="font-family: Anantason-Medium;">แพลตฟอร์มที่มอบแคมเปญสุดพิเศษ<br>
+							<span style="line-height: 2rem;">และสิทธิถือครองดิจิตอลแอสเซทให้กับผู้ใช้บริการ</span>
                             </p>
                         </div>
                         <div class="mx-1 mt-3 text-start align-self-center">
                             <p class="menu">Home<br>
-                            <p class="menu2">Company<br>
-                            <p class="menu3">Product<br>
+                            <p class="menu2">Product<br>
+							<p class="menu3">Campaign<br>
                             <p class="menu4">Contact<br>
                             </p>
                         </div>
@@ -254,6 +297,13 @@
                 cursorChar: '|',
             })
         </script>
+		<!-- partial -->
+		<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
+		<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
+		<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script>
+		<script  src="./animation.js"></script>
+		<script type="text/javascript" src="js/particles/particles.min.js"></script>
+		<script type="text/javascript" src="js/particles/main.script.js"></script>
 </body>
 
 </html>
