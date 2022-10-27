@@ -84,21 +84,27 @@ hr.line {
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-/*fade-in-image*/
+/*fade-in-image left to right*/
 
 .fade-in-image {
-  animation: fadeIn 5s;
-  -webkit-animation: fadeIn 5s;
-  -moz-animation: fadeIn 5s;
-  -o-animation: fadeIn 5s;
-  -ms-animation: fadeIn 5s;
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation-direction: alternate;
+  position: relative;
 }
 
 @keyframes fadeIn {
   0% {
+	left: -100px;
+	top: 0px;
     opacity: 0;
   }
   100% {
+	left: 0px;
+	top: 0px;
     opacity: 1;
   }
 }
@@ -135,6 +141,115 @@ hr.line {
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+/*fade-in-image right to left*/
+.fade-in-image2 {
+  animation: fadeIn2 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes fadeIn2 {
+  0% {
+	right: -100px;
+	top: 0px;
+    opacity: 0;
+  }
+  100% {
+	right: 0px;
+	top: 0px;
+    opacity: 1;
+  }
+}
+
+/*fade-in-image*/
+.fade-in-image3 {
+  animation: fadeIn3 2s;
+  -webkit-animation: fadeIn3 2s;
+  -moz-animation: fadeIn3 2s;
+  -o-animation: fadeIn3 2s;
+  -ms-animation: fadeIn3 2s;
+  animation-direction: alternate;
+}
+
+@keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*fade-in-image top to bottom*/
+.fade-in-image4 {
+  animation: fadeIn4 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes fadeIn4 {
+  0% {
+	top: -100px;
+    opacity: 0;
+  }
+  100% {
+	top: 0px;
+    opacity: 1;
+  }
+}
+/*fade-in-image bottom to top*/
+.fade-in-image5 {
+  animation: fadeIn5 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes fadeIn5 {
+  0% {
+	top: 100px;
+    opacity: 0;
+  }
+  100% {
+	top: 0px;
     opacity: 1;
   }
 }
@@ -274,4 +389,35 @@ span {
 .address {
   width: 300px;
   font-size: 14px;
+}
+
+/* animation running */
+.zoom-in-out-box {
+  animation: zoom-in-zoom-out 10s ease infinite;
+}
+.zoom-in-out-box2 {
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes zoom-in-zoom-out2 {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
