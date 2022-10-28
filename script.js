@@ -17,60 +17,69 @@ const scrollFunction = () => {
 
   let element1 = document.getElementById('image2-1');
   let element1v2 = document.getElementById('text-context-service-wide');
+  let element1v3 = document.getElementById('text-context-service-mobile');
   let element2 = document.getElementById('image2-2');
   let element2v2 = document.getElementById('image2-2v2');
   let element3 = document.getElementById('image3-1');
   let element3v2 = document.getElementById('image3-1v2');
+  let element3v3 = document.getElementById('text-context-wallet-wide');//text animation pc
+  let element3v4 = document.getElementById('text-context-wallet-mobile');//text animation mobile
   let element4 = document.getElementById('network-z-drive');
   let element5 = document.getElementById('image4-2');
   let element6 = document.getElementById('image5-1');
+  let element6v2 = document.getElementById('image5-1v2');
   let element7 = document.getElementById('image6-1');
   //list menu
-  let elementsName = ['home-nav', 'company-nav', 'product-nav', 'contact-nav'];
+  let elementsName = ['home-nav', 'product-nav', 'campain-nav', 'contact-nav'];
   //home part1
-  if (document.documentElement.scrollTop < 200) {
+  if (document.documentElement.scrollTop < 70) {
     onActiveMenu('home-nav');
   }
   //company part2
   else if (
-    document.documentElement.scrollTop >= 400 &&
-    document.documentElement.scrollTop < 1000
+    document.documentElement.scrollTop >= 100 &&
+    document.documentElement.scrollTop < 1200
   ) {
-    onActiveMenu('company-nav');
+    onActiveMenu('product-nav');
     element1.classList.add('fade-in-image');
 	element1v2.classList.add('fade-in-image5');
+	element1v3.classList.add('fade-in-image5');
   }
   //product part3
   else if (
-    document.documentElement.scrollTop > 1000 &&
-    document.documentElement.scrollTop < 2200
+    document.documentElement.scrollTop >= 1200 &&
+    document.documentElement.scrollTop < 1850
   ) {
-    onActiveMenu('product-nav');
+    onActiveMenu('campain-nav');
     element2.classList.add('fade-in-image2');
 	element2v2.classList.add('fade-in-image5');
 	element3v2.classList.add('fade-in-image5');
   }
   //contact part4
   else if (
-    document.documentElement.scrollTop > 2200 &&
+    document.documentElement.scrollTop > 1850 &&
     document.documentElement.scrollTop < 3200
   ) {
     onActiveMenu('contact-nav');
     element3.classList.add('fade-in-image3');
+	element3v3.classList.add('fade-in-image5');
+	element3v4.classList.add('fade-in-image5');
+	//part6
+    element4.classList.add('fade-in-image');
+	//ใส่
     //part5
   } else if (
     document.documentElement.scrollTop > 3200 &&
     document.documentElement.scrollTop < 3900
   ) {
-    //part6
-    element4.classList.add('fade-in-image3');
     element5.classList.add('fade-in-image');
     //part7
   } else if (
     document.documentElement.scrollTop > 3900 &&
     document.documentElement.scrollTop < 5000
   ) {
-    element6.classList.add('fade-in-image');
+    element6.classList.add('fade-in-image4');
+	element6v2.classList.add('fade-in-image5');
     //part7
   } else if (
     document.documentElement.scrollTop > 5000 &&
@@ -213,20 +222,22 @@ const addContentCommon = () => {
   element3.style.fontSize = '0.65rem';
   element5.style.fontSize = '0.65rem';
   element7.style.top = '10rem';
+  element7.style.paddingTop = '60px';
   element2.innerHTML =
-    'มอบสิทธิ์ความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br> ด้วยการถือครองดิจิทัลแอสเซทตลอด 365 วัน';
+    'มอบสิทธิ์ความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br> ด้วยการถือครองดิจิตอลแอสเซทตลอด 365 วัน';
   element3.innerHTML =
     'ร่วมสนุกกับแคมเปญพิเศษ <br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 1.7rem;">สะสม Point รับของรางวัล <br></b>และสิทธิพิเศษอื่นๆ จากบริษัท*';
   element5.innerHTML =
-    'Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ';
+    '<span class="fs-3" style="color: rgb(120, 120, 120); font-size: 0.65rem;">Wallet ช่องทางการชำระเงินที่ปลอดภัย</span> <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3" style="color: rgb(120, 120, 120); font-size: 0.65rem;">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ';
   //element6.src = '';
 
   element8.src = './images/part-1/BG1-m.png';
+  
+
 };
 
 const removeContentCommon = () => {
   removeLogo();
-
   let element1 = document.getElementById('text-context-service-wide');
   let element2 = document.getElementById('text-context-service-mobile');
   let element3 = document.getElementById('text-context-point-mobile');
@@ -240,14 +251,32 @@ const removeContentCommon = () => {
   element3.classList.remove('text-center');
   element2.innerHTML = '';
   element5.innerHTML = '';
-  element1.innerHTML =
-    'มอบสิทธิ์ความเป็นเจ้าของ<br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br> ด้วยการถือครองดิจิทัลแอสเซทตลอด 365 วัน';
-  element3.innerHTML =
+  //ดิจิตอล
+  
+  var heightcookieza007;
+  heightcookieza007 = window.innerHeight;
+  if(heightcookieza007 >= 700 && heightcookieza007 <= 800 || heightcookieza007 >=540 && heightcookieza007 <=600){
+	  //มือถือไม่ปกติ
+	  element1.innerHTML =
+    '<font style="line-height: 3rem;font-size: 18px;">มอบสิทธิ์ความเป็นเจ้าของ</font><br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 28px;white-space: nowrap;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br><font style="font-size: 18px;white-space: nowrap;">ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ</font><font style="font-size: 18px;white-space: nowrap;">ด้วยการถือครองดิจิตอลแอสเซทตลอด 365 วัน</font>';
+	  element3.innerHTML =
+    '<font style="line-height: 3rem;font-size: 18px;">ร่วมสนุกกับแคมเปญพิเศษ</font><br><font><b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 28px;white-space: nowrap;">สะสม Point รับของรางวัล</font></b><font style="font-size: 18px;"> <br>และสิทธิพิเศษอื่นๆ จากบริษัท*</font>';
+	  element4.innerHTML =
+    '<br><font style="line-height: 3rem;font-size: 18px;">Wallet ช่องทางการชำระเงินที่ปลอดภัย<font> <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 28px;white-space: nowrap;">สะดวก ในการเข้าใช้แพลตฟอร์ม </b><br><font style="font-size: 18px;">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ</font>';
+	
+	
+  }else{
+	  
+	  //มือถือปกติ
+	  element1.innerHTML =
+    '<font style="line-height: 5rem;">มอบสิทธิ์ความเป็นเจ้าของ</font><br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br> ด้วยการถือครองดิจิตอลแอสเซทตลอด 365 วัน';
+	  element3.innerHTML =
     'ร่วมสนุกกับแคมเปญพิเศษ <br><b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะสม Point รับของรางวัล <br></b>และสิทธิพิเศษอื่นๆ จากบริษัท*';
-  element4.innerHTML =
-    'Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1)">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ';
-  element1.style.lineHeight = '4rem';
-  element3.style.lineHeight = '4rem';
+	  element4.innerHTML =
+    'Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ';
+  }
+  //element1.style.lineHeight = '4rem';
+  //element3.style.lineHeight = '4rem';
 
   //element6.src = './images/part-4/p4.png';
   element7.style.top = '15rem';
@@ -261,5 +290,5 @@ const addLogo = () => {
 
 const removeLogo = () => {
   let logo = document.getElementById('img-logo');
-  logo.style.marginLeft = '60px';
+  logo.style.marginLeft = '30px';
 };

@@ -92,7 +92,6 @@ hr.line {
   -moz-animation: fadeIn 1s;
   -o-animation: fadeIn 1s;
   -ms-animation: fadeIn 1s;
-  animation-direction: alternate;
   position: relative;
 }
 
@@ -111,36 +110,52 @@ hr.line {
 
 @-moz-keyframes fadeIn {
   0% {
+	left: -100px;
+	top: 0px;
     opacity: 0;
   }
   100% {
+	left: 0px;
+	top: 0px;
     opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
+	left: -100px;
+	top: 0px;
     opacity: 0;
   }
   100% {
+	left: 0px;
+	top: 0px;
     opacity: 1;
   }
 }
 
 @-o-keyframes fadeIn {
   0% {
+	left: -100px;
+	top: 0px;
     opacity: 0;
   }
   100% {
+	left: 0px;
+	top: 0px;
     opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
   0% {
+	left: -100px;
+	top: 0px;
     opacity: 0;
   }
   100% {
+	left: 0px;
+	top: 0px;
     opacity: 1;
   }
 }
@@ -238,12 +253,28 @@ hr.line {
 }
 /*fade-in-image bottom to top*/
 .fade-in-image5 {
-  animation: fadeIn5 1s;
+  animation: fadeIn5 2s;
   animation-direction: alternate;
   position: relative;
 }
 
 @keyframes fadeIn5 {
+  0% {
+	top: 100px;
+    opacity: 0;
+  }
+  100% {
+	top: 0px;
+    opacity: 1;
+  }
+}
+.fade-in-image6 {
+  animation: fadeIn6 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes fadeIn6 {
   0% {
 	top: 100px;
     opacity: 0;
@@ -396,7 +427,7 @@ span {
   animation: zoom-in-zoom-out 10s ease infinite;
 }
 .zoom-in-out-box2 {
-  animation: zoom-in-zoom-out 1s ease infinite;
+  animation: zoom-in-zoom-out2 5s ease infinite;
 }
 
 @keyframes zoom-in-zoom-out {
@@ -404,7 +435,7 @@ span {
     transform: scale(1, 1);
   }
   50% {
-    transform: scale(1.05, 1.05);
+    transform: scale(0.9, 0.9);
   }
   100% {
     transform: scale(1, 1);
@@ -415,9 +446,12 @@ span {
     transform: scale(1, 1);
   }
   50% {
-    transform: scale(1.1, 1.1);
+    transform: scale(0.9, 0.9);
   }
   100% {
     transform: scale(1, 1);
   }
+}
+.hidedata{
+	opacity: 0;
 }

@@ -10,6 +10,27 @@
     function initHeader() {
         width = window.innerWidth;
         height = window.innerHeight;
+		if(height >= 700 && height <= 800){
+			height = window.innerHeight+100;
+		}else if(height >= 1000 && height <= 1100){
+			height = window.innerHeight-200;
+		}else if(height >= 400 && height <= 410){
+			height = window.innerHeight+400;
+		}else if(height >= 1200 && height <= 1220){
+			//iphone 12 pro ไม่นอน
+			height = window.innerHeight-200;
+		}else if(height >= 530 && height <= 570){
+			//iphone 12 pro นอน
+			height = window.innerHeight+400;
+		}
+		
+		if(height == 824){
+			let element0 = document.getElementById('tranferdiv');
+			element0.classList.remove('d-sm-flex');
+			element0.classList.add('d-xl-inline-flex');
+			element0.style.height = '1300px';
+		}
+		
         target = {x: width/2, y: height/2};
 
         largeHeader = document.getElementById('large-header');
