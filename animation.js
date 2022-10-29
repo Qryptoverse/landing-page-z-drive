@@ -24,7 +24,7 @@
 			height = window.innerHeight+400;
 		}
 		
-		if(height == 824){
+		if(height >= 824 && height < 900){
 			let element0 = document.getElementById('tranferdiv');
 			element0.classList.remove('d-sm-flex');
 			element0.classList.add('d-xl-inline-flex');
