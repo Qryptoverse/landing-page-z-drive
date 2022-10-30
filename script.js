@@ -269,18 +269,29 @@ const removeContentCommon = () => {
 	  
 	  //มือถือปกติ
 	  element1.innerHTML =
-    '<font style="line-height: 5rem;">มอบสิทธิ์ความเป็นเจ้าของ</font><br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br> ด้วยการถือครองดิจิตอลแอสเซทตลอด 365 วัน';
+    '<font style="line-height: 5rem;">มอบสิทธิ์ความเป็นเจ้าของ</font><br> <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;white-space: nowrap;">ให้ผู้ใช้บริการแพลตฟอร์ม</b><br>ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br> ด้วยการถือครองดิจิตอลแอสเซทตลอด 365 วัน';
 	  element3.innerHTML =
-    'ร่วมสนุกกับแคมเปญพิเศษ <br><b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะสม Point รับของรางวัล <br></b>และสิทธิพิเศษอื่นๆ จากบริษัท*';
+    'ร่วมสนุกกับแคมเปญพิเศษ <br><b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;white-space: nowrap;">สะสม Point รับของรางวัล <br></b>และสิทธิพิเศษอื่นๆ จากบริษัท*';
 	  element4.innerHTML =
-    'Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ';
+    'Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1"style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;white-space: nowrap;">สะดวก ในการเข้าใช้แพลตฟอร์ม </b> <p class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ';
   }
+  
+  /*ปรับ text บนสุด ให้รองรับ โดยการขยับความห่างลงมา*/
+  if(heightcookieza007 >= 1600 && heightcookieza007 <= 1750){
+	  //ipad air
+	  element7.style.top = '25rem';
+  }else if(heightcookieza007 >= 1400 && heightcookieza007 <= 1500){
+	  //ipad mini
+	  element7.style.top = '20rem';
+  }else{
+	  element7.style.top = '15rem';
+  }
+  //alert(heightcookieza007);
   //element1.style.lineHeight = '4rem';
   //element3.style.lineHeight = '4rem';
-
   //element6.src = './images/part-4/p4.png';
-  element7.style.top = '15rem';
   element8.src = './images/part-1/bg1.png';
+  
 };
 
 const addLogo = () => {

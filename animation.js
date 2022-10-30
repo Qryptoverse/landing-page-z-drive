@@ -22,14 +22,46 @@
 		}else if(height >= 530 && height <= 570){
 			//iphone 12 pro นอน
 			height = window.innerHeight+400;
+		}else if(height >= 1400 && height <= 1500){
+			//ipad mini
+			height = window.innerHeight-300;
+		}else if(height >= 1680 && height <= 1700){
+			//ipad air
+			height = window.innerHeight-300;
 		}
-		
-		if(height >= 824 && height < 900){
+		//transfer
+		if(height >= 824 && height < 830){
+			//fold แนวตั้ง
 			let element0 = document.getElementById('tranferdiv');
 			element0.classList.remove('d-sm-flex');
 			element0.classList.add('d-xl-inline-flex');
 			element0.style.height = '1300px';
+		}else if(height >= 830 && height <= 835){
+			//fold กางจอแนวนอน
+			let element0 = document.getElementById('tranferdiv');
+			element0.classList.remove('d-sm-flex');
+			element0.classList.add('d-sm-flex');
+			element0.style.height = '1000px';
+		}else if(height >= 1160 && height <= 1174){
+			//ipad mini แนวตั้ง + ipad air แนวนอน
+			let element0 = document.getElementById('tranferdiv');
+			element0.classList.remove('d-sm-flex');
+			element0.classList.add('d-sm-flex');
+			element0.style.height = '1000px';
+		}else if(height >= 1090 && height <= 1100){
+			//ipad mini แนวนอน
+			let element0 = document.getElementById('tranferdiv');
+			element0.classList.remove('d-sm-flex');
+			element0.classList.add('d-xl-inline-flex');
+			element0.style.height = '1100px';
+		}else if(height >= 830 && height <= 840){
+			//fold กางจอแนวนอน
+			let element0 = document.getElementById('tranferdiv');
+			element0.classList.remove('d-sm-flex');
+			element0.classList.add('d-sm-flex');
+			element0.style.height = '1100px';
 		}
+		//alert(height);
 		
         target = {x: width/2, y: height/2};
 
