@@ -1,0 +1,62 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+::selection {
+  color: #{$white};
+  background-color: #{$selection-color};
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.page-wrapper {
+  flex: 1 0 auto;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: inline-block;
+  fill: currentColor;
+  line-height: 1;
+  &.icon-sm {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 1rem;
+  }
+}
+.footer {
+  flex-shrink: 0;
+}
+svg {
+  fill: currentColor;
+}
+.section {
+  --#{$prefix}section-padding-y: 3rem;
+  padding-top: var(--#{$prefix}section-padding-y);
+  padding-bottom: var(--#{$prefix}section-padding-y);
+}
+@include media-breakpoint-up(sm) {
+  .section {
+    --#{$prefix}section-padding-y: 3rem;
+  }
+}
+@include media-breakpoint-up(md) {
+  .section {
+    --#{$prefix}section-padding-y: 4rem;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section {
+    --#{$prefix}section-padding-y: 5rem;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .section {
+    --#{$prefix}section-padding-y: 6rem;
+  }
+}

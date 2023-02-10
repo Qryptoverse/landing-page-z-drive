@@ -1,0 +1,47 @@
+.navbar-brand-item {
+  height: 3rem;
+}
+.header {
+  .navbar-nav {
+    --#{$prefix}nav-link-color: var(--#{$prefix}white);
+    --#{$prefix}nav-link-hover-color: var(--#{$prefix}white);
+    --#{$prefix}navbar-active-color: var(--#{$prefix}white);
+  }
+}
+@include media-breakpoint-up(md) {
+  .navbar-brand-item {
+    height: 3rem;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .navbar-brand-item {
+    height: 4rem;
+  }
+}
+@include media-breakpoint-down(md) {
+  .offcanvas {
+    .nav-item {
+      transform: translateX(-4rem);
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      &:nth-child(2) {
+        transition: all 0.4s ease-in-out;
+      }
+      &:nth-child(3) {
+        transition: all 0.5s ease-in-out;
+      }
+      &:nth-child(4) {
+        transition: all 0.6s ease-in-out;
+      }
+      &:nth-child(5) {
+        transition: all 0.7s ease-in-out;
+      }
+    }
+    &.show {
+      .nav-item {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+}

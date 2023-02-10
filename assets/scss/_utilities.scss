@@ -1,0 +1,98 @@
+@each $name, $glyph in $container-max-widths {
+  .max-w-#{$name} {
+    max-width: #{$glyph} !important;
+  }
+}
+@each $name, $glyph in $custom-rounded {
+  .rounded-#{$name} {
+    border-radius: #{$glyph} !important;
+  }
+}
+@each $name, $glyph in $custom-font-size {
+  .text-#{$name} {
+    font-size: #{$glyph} !important;
+  }
+}
+@include media-breakpoint-up(sm) {
+  @each $name, $glyph in $custom-font-size {
+    .sm-text-#{$name} {
+      font-size: #{$glyph} !important;
+    }
+  }
+  @each $name, $glyph in $custom-rounded {
+    .sm-rounded-#{$name} {
+      border-radius: #{$glyph} !important;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  @each $name, $glyph in $custom-font-size {
+    .md-text-#{$name} {
+      font-size: #{$glyph} !important;
+    }
+  }
+  @each $name, $glyph in $custom-rounded {
+    .md-rounded-#{$name} {
+      border-radius: #{$glyph} !important;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  @each $name, $glyph in $custom-font-size {
+    .lg-text-#{$name} {
+      font-size: #{$glyph} !important;
+    }
+  }
+  @each $name, $glyph in $custom-rounded {
+    .lg-rounded-#{$name} {
+      border-radius: #{$glyph} !important;
+    }
+  }
+  .lg-border-0 {
+    --#{$prefix}border-width: 0;
+  }
+}
+@include media-breakpoint-up(xl) {
+  @each $name, $glyph in $custom-font-size {
+    .xl-text-#{$name} {
+      font-size: #{$glyph} !important;
+    }
+  }
+  @each $name, $glyph in $custom-rounded {
+    .xl-rounded-#{$name} {
+      border-radius: #{$glyph} !important;
+    }
+  }
+  .rounded-bottom-xl-4 {
+    border-bottom-right-radius: var(--#{$prefix}border-radius-xl) !important;
+    border-bottom-left-radius: var(--#{$prefix}border-radius-xl) !important;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  @each $name, $glyph in $custom-font-size {
+    .xxl-text-#{$name} {
+      font-size: #{$glyph} !important;
+    }
+  }
+  @each $name, $glyph in $custom-rounded {
+    .xxl-rounded-#{$name} {
+      border-radius: #{$glyph} !important;
+    }
+  }
+}
+.fs-medium {
+  font-weight: 500 !important;
+}
+.fs-semibold {
+  font-weight: 600 !important;
+}
+
+.bg-gradient-to-b {
+  background: linear-gradient(180deg, #6876F0 0%, #65AFF0 100%);
+}
+.bg-hero {
+  background-image: url(../svg/bg-hero.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

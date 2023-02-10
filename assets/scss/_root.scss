@@ -1,0 +1,4 @@
+:root {
+  --#{$prefix}muted: #{$muted-color};
+  --#{$prefix}muted-rgb: #{to-rgb($muted-color)};
+}

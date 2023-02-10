@@ -1,0 +1,76 @@
+$primary: #5A8EF8;
+$secondary: #678EF1;
+$light: #f7fbfe;
+$white: #ffffff;
+$black: #000000;
+$heading-color: #787878;
+$text-color: #6A6A6A;
+$muted-color: #999999;
+$body-color: $text-color;
+$selection-color: tint-color($primary, 50%);
+
+$variable-prefix: zd-;
+$prefix: $variable-prefix;
+
+$font-family-sans-serif: 'Noto Sans Thai', sans-serif;
+
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+$font-size-xl: $font-size-base * 1.5;
+$font-size-2xl: $font-size-base * 2;
+
+$custom-rounded: (
+  xs: 0.375rem,
+  sm: 0.5rem,
+  md: 0.75rem,
+  lg: 1rem,
+  xl: 1.5rem,
+  xxl: 2rem,
+);
+
+$custom-font-size: (
+  xs: 0.75rem,
+  sm: 0.875rem,
+  md: 1rem,
+  2md: 1.125rem,
+  lg: 1.25rem,
+  xl: 1.5rem,
+  2xl: 2rem,
+  n3xl: 2.5rem,
+  3xl: 3rem,
+  4xl: 4rem,
+  5xl: 5rem,
+  6xl: 6rem,
+  7xl: 7rem,
+  8xl: 8rem,
+);
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px,
+);
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+// $box-shadow-sm:               0 .125rem .375rem rgba(var(--#{$prefix}body-color-rgb), .1);
+
+$modal-sm:                          540px;
+$modal-md:                          680px;
+$modal-lg:                          800px;
+$modal-xl:                          1140px;
+
+$enable-smooth-scroll:        false;
+$enable-negative-margins:     true;
