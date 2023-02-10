@@ -1,316 +1,878 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.7">
-    <title>ZDrive</title>
-    <link rel="stylesheet" href="styles.css?v=1.6">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
-    <script src="script.js?v=1.6"></script>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel='stylesheet' href='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css'>
-	<link rel="stylesheet" href="./animation.css?v=1.7">
-	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
-	<link rel="apple-touch-icon" href="images/logo.png">
-	<style>
-	.cookie1 {
-		-webkit-animation-duration: 10s;
-            animation-duration: 10s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-	}
-	@-webkit-keyframes fadeInLeft {
-            0% {
-               opacity: 0;
-               -webkit-transform: translateX(-20px);
-            }
-            100% {
-               opacity: 1;
-               -webkit-transform: translateX(0);
-            }
-         }
-         
-         @keyframes fadeInLeft {
-            0% {
-               opacity: 0;
-               transform: translateX(-20px);
-            }
-            100% {
-               opacity: 1;
-               transform: translateX(0);
-            }
-         }
-         
-         .fadeInLeft {
-         -webkit-animation-name: fadeInLeft;
-         animation-name: fadeInLeft;
-         } 
-         animation-name: fadeInDown;
-	</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZDrive สร้างรายได้จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล</title>
+  <!-- SEO Meta Tags-->
+  <meta name="description"
+    content="ZDrive แพลตฟอร์มเช่าสิทธิ์การถือครองพื้นที่ สร้างรายได้จากการถือครองพื้นที่จัดเก็บในยุคดิจิทัล โดย บริษัท คอร์ แอสเซท จำกัด">
+  <meta name="keywords" content="ZDrive,สร้างรายได้, ดิจิตอลแอสเซท, คอร์ แอสเซท">
+  <meta name="author" content="Modadev - https://modadev.net/">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Plugin CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="assets/css/theme.min.css?v202302100008">
 </head>
 
-<body>
-    <div class="bg-color">
-        <!----------------- Navbar ------------------->
-        <div class="position-fixed" style="z-index: 2; width: 100%;" >
-            <nav class="navbar navbar-expand-lg navbar-dark navbar-color "
-                style="background-color:rgba(103, 142, 241, 1)">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#home">
-                        <img src=".\images/logo/logozdrive.png" alt="" width="204" height="57"
-                            class="d-inline-block align-text-top justify-content-start  img-fluid"
-                            style="margin-left: 30px;" id="img-logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="">
-                            <img src="./images/icon/Vector.png">
-                        </span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item  mx-5">
-                                <a id="home-nav" class="nav-link active" aria-current="page" href="#large-header"
-                                    style="font-family: Anantason-Light;">Home</a>
-                            </li>
-							<li class="nav-item mx-5">
-                                <a id="product-nav" class="nav-link" href="#Product"
-                                    style="font-family: Anantason-Light;">Product</a>
-                            </li>
-                            <li class="nav-item mx-5">
-                                <a id="campain-nav" class="nav-link" href="#Campaign"
-                                    style="font-family: Anantason-Light;">Campaign</a>
-                            </li>
-                            <li class="nav-item mx-5">
-                                <a id="contact-nav" class="nav-link" href="#contact"
-                                    style="font-family: Anantason-Light;">Contact</a>
-                            </li>
-                        </ul>
-                        <span>
-                            <button class="btn btn-outline-light mx-5" type="button" onclick="location.href='https://project.zdrive.fund/login'">Login
-                            </button>
-                        </span>
+<body class="scroll-smooth">
+  <main class="page-wrapper overflow-hidden">
+    <header class="header fixed-top navbar-sticky navbar navbar-dark bg-secondary navbar-expand-md py-lg-3"
+      data-scroll-header>
+      <div class="container-fluid px-lg-5">
+        <a href="index.html" class="navbar-brand py-0">
+          <img src="assets/images/navbar-logo-zdrive.png" class="navbar-brand-item me-2" alt="Logo ZDrive">
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-start border-0">
+          <div class="offcanvas-header border-bottom border-white border-opacity-10">
+            <a href="index.html" class="navbar-brand py-0">
+              <img src="assets/images/navbar-logo-zdrive.png" class="navbar-brand-item" alt="Logo ZDrive">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-flex align-items-center justify-content-center">
+            <ul class="navbar-nav ms-md-auto text-center gap-4 gap-md-0">
+              <li class="nav-item">
+                <a href="#start" class="nav-link text-xl md-text-md px-md-3 px-lg-4 px-xl-5 active" data-scroll>Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#product" class="nav-link text-xl md-text-md px-md-3 px-lg-4 px-xl-5" data-scroll>Product</a>
+              </li>
+              <li class="nav-item">
+                <a href="#mission" class="nav-link text-xl md-text-md px-md-3 px-lg-4 px-xl-5" data-scroll>Mission</a>
+              </li>
+              <li class="nav-item">
+                <a href="#roadmap" class="nav-link text-xl md-text-md px-md-3 px-lg-4 px-xl-5" data-scroll>Roadmap</a>
+              </li>
+              <li class="nav-item">
+                <a href="#footer" class="nav-link text-xl md-text-md px-md-3 px-lg-4 px-xl-5" data-scroll>Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <a href="https://project.zdrive.fund/login" target="_blank"
+            class="btn btn-outline-white ms-md-3 ms-lg-4 ms-xl-5">Login</a>
+          <button type="button" class="navbar-toggler shadow-none" data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+    <section class="section bg-gradient-to-b text-center text-white hero position-relative overflow-hidden" id="start">
+      <div class="shape-circular-wave shape-tl shape-white">
+        <div class="shape-inner">
+          <span class="shape-item shape-1"></span>
+          <span class="shape-item shape-2"></span>
+          <span class="shape-item shape-3"></span>
+          <span class="shape-item shape-4"></span>
+          <span class="shape-item shape-5"></span>
+          <span class="shape-item shape-6"></span>
+        </div>
+      </div>
+      <div class="shape-circular-wave shape-br shape-white">
+        <div class="shape-inner">
+          <span class="shape-item shape-1"></span>
+          <span class="shape-item shape-2"></span>
+          <span class="shape-item shape-3"></span>
+          <span class="shape-item shape-4"></span>
+          <span class="shape-item shape-5"></span>
+          <span class="shape-item shape-6"></span>
+        </div>
+      </div>
+      <div class="pt-5">
+        <div class="container py-5">
+          <div class="animate-rotate">
+            <div class="rotate-1"></div>
+            <div class="rotate-2">
+              <div class="inner">
+                <span class="circle"></span>
+              </div>
+            </div>
+            <div class="rotate-3">
+              <div class="inner">
+                <span class="circle"></span>
+              </div>
+            </div>
+            <div class="rotate-4">
+              <div class="inner">
+                <span class="circle"></span>
+              </div>
+            </div>
+          </div>
+          <div class="position-relative z-1 py-md-5 mt-md-5">
+            <div class="pt-lg-5">
+              <div class="d-flex justify-content-center px-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-duration="1000">
+                <img src="assets/images/logo-zdrive.png" width="460" height="156" class="img-fluid" alt="Logo ZDrive">
+              </div>
+              <div class="pb-lg-5">
+                <h1 class="fw-normal text-md md-text-lg lg-text-xl mb-0" data-aos="fade-up" data-aos-duration="1200">
+                  ZDrive แพลตฟอร์มเช่าสิทธิ์การถือครองพื้นที่ <br class="d-inline-block d-md-none">โดย บริษัท คอร์
+                  แอสเซท
+                  จำกัด
+                </h1>
+                <p class="md-text-lg lg-text-xl mb-4 mb-md-5" data-aos="fade-up" data-aos-duration="1400">
+                  บริหารจัดการดิจิตอลแอสเซท จัดเก็บข้อมูลทางอิเล็กทรอนิกส์ด้วยการนำเทคโนโลยี ABBC<br
+                    class="d-none d-md-inline-block">
+                  ให้ตรงตามความต้องการของผู้ใช้งานกลุ่มเฉพาะ</p>
+                <div class="d-inline-block mb-4" data-aos="fade-up" data-aos-duration="1600">
+                  <span
+                    class="md-text-lg lg-text-xl fw-semibold d-flex gap-3 align-items-center justify-content-center px-4 py-2 rounded-pill border">
+                    Discovery zdrive.fund
+                    <svg width="33" height="32" aria-hidden="true">
+                      <use xlink:href="assets/svg/icons.svg#icon-rocket" href="assets/svg/icons.svg#icon-rocket">
+                      </use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute bottom-0 start-0 w-100 mb-n1">
+        <img src="assets/svg/shape-1.svg" class="img-fluid w-100" alt="shape">
+      </div>
+    </section>
+    <section class="section pb-0 pt-xl-5" id="product">
+      <div class="container pt-lg-5 pt-xl-0">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-xl-6 text-center text-xl-start order-2 order-xl-1">
+            <h2 class="text-lg md-text-2xl mb-0" data-aos="fade-up" data-aos-duration="1000">
+              ZDrive เช่าสิทธิ์การถือครองพื้นที่</h2>
+            <p class="fw-bold text-2xl md-text-3xl text-primary" data-aos="fade-up" data-aos-duration="1200">
+              ให้ผู้ใช้บริการแพลตฟอร์ม</p>
+            <p class="md-text-lg lg-text-xl" data-aos="fade-up" data-aos-duration="1400">ร่วมสนุกกับภารกิจ
+              รับรางวัลจากกิจกรรม<br>ด้วยการเช่าสิทธิ์ถือครองดิจิตอลแอสเซทตลอด 365 วัน</p>
+          </div>
+          <div class="col-lg-10 col-xl-6 order-1 order-xl-2">
+            <div class="ratio ratio-1x1 mt-n4 mt-md-n5 xl-mt-0">
+              <div class="shape-circular-wave shape-cc shape-primary">
+                <div class="shape-inner">
+                  <span class="shape-item shape-1"></span>
+                  <span class="shape-item shape-2"></span>
+                  <span class="shape-item shape-3"></span>
+                  <span class="shape-item shape-4"></span>
+                  <span class="shape-item shape-5"></span>
+                  <span class="shape-item shape-6"></span>
+                </div>
+              </div>
+              <div
+                class="p-4 p-md-0 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+                <img src="assets/images/phone-open-zdrive.png" class="img-fluid" alt="Phone open ZDrive"
+                  data-aos="zoom-in" data-aos-duration="1000">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section bg-light py-0" id="mission">
+      <div class="w-100">
+        <img src="assets/svg/shape-2.svg" class="img-fluid w-100" alt="shape">
+      </div>
+      <div class="container pt-md-5">
+        <div class="py-5">
+          <div class="row align-items-center">
+            <div class="col-xl-6 text-center">
+              <div class="d-flex justify-content-center">
+                <div class="position-relative">
+                  <div class="rellax" data-rellax-percentage="0.5" data-rellax-speed="3">
+                    <img src="assets/images/phone-collect-points-and-get-rewards-1.png" class="img-fluid mb-5 mb-xl-0"
+                      alt="Collect points and get rewards">
+                  </div>
+                  <div class="rellax position-absolute top-0 start-0" data-rellax-percentage="0.5"
+                    data-rellax-speed="2">
+                    <img src="assets/images/phone-collect-points-and-get-rewards-2.png" class="img-fluid mb-5 mb-xl-0"
+                      alt="Collect points and get rewards">
+                  </div>
+                  <div class="rellax position-absolute top-0 start-0" data-rellax-percentage="0.5"
+                    data-rellax-speed="1">
+                    <img src="assets/images/phone-collect-points-and-get-rewards-3.png" class="img-fluid mb-5 mb-xl-0"
+                      alt="Collect points and get rewards">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 text-center text-xl-end">
+              <p class="text-lg md-text-2xl mb-0" data-aos="fade-up" data-aos-duration="1000">ร่วมสนุกกับ กิจกรรม และ
+                ภารกิจ</p>
+              <h2 class="fw-bold md-text-3xl text-primary" data-aos="fade-up" data-aos-duration="1200">สะสม คะแนน
+                รับของรางวัล </h2>
+              <p class="md-text-lg lg-text-xl" data-aos="fade-up" data-aos-duration="1400">และ สิทธิพิเศษอื่นๆ จากบริษัท
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100">
+        <img src="assets/svg/shape-1.svg" class="img-fluid w-100" alt="shape">
+      </div>
+    </section>
+    <section class="section pt-5">
+      <div class="container py-lg-5">
+        <div class="row align-items-center justify-content-center g-5 g-xl-3">
+          <div class="col-xl-6 text-center">
+            <h2 class="text-lg md-text-2xl mb-0" data-aos="fade-up" data-aos-duration="1000">Wallet
+              ช่องทางการชำระเงินที่ปลอดภัย</h2>
+            <p class="fw-bold text-xl md-text-3xl text-primary mb-0" data-aos="fade-up" data-aos-duration="1200">สะดวก
+              ในการเข้าใช้แพลตฟอร์ม</p>
+            <p class="md-text-lg lg-text-xl" data-aos="fade-up" data-aos-duration="1400">
+              และเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ</p>
+          </div>
+          <div class="col-lg-10 col-xl-6 px-5 px-md-0 pb-5">
+            <div class="row justify-content-center justify-content-xl-end align-items-start">
+              <div class="col-6 col-md-auto position-relative mt-3">
+                <img src="assets/images/wallet-secure-payment-gateway-blue.png"
+                  class="img-fluid position-relative z-1 updown-1" alt="Wallet secure payment gateway">
+                <div class="w-100 position-absolute top-50 start-50 translate-middle">
+                  <div class="ratio ratio-1x1 mt-n4 mt-md-n5 xl-mt-0" style="transform: scale(1.8);">
+                    <div class="shape-circular-wave shape-cc shape-primary">
+                      <div class="shape-inner">
+                        <span class="shape-item shape-1"></span>
+                        <span class="shape-item shape-2"></span>
+                        <span class="shape-item shape-3"></span>
+                        <span class="shape-item shape-4"></span>
+                        <span class="shape-item shape-5"></span>
+                        <span class="shape-item shape-6"></span>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </nav>
-        </div>
-		<!-- test -->
-		
-		<div id="large-header" class="large-header" style="background-color:#f5f5f5;">
-        <!-------------------- Part 1 Intro------------------->		
-			<!-- animation -->
-			<!-- <canvas id="demo-canvas"></canvas>-->
-            <!--<img src="./images/part-1/bg1.png" width="100%" height="1000px" id="id-bg1">-->
-            <div class="content-part-1" id="id-content-1">
-                <img src="./images/logo/logobig.png" class="img-fluid content-logo-img-1 fade-in-image4">
-
-                <p class="text-center text-white mt-4 content-text">
-                    <b class="fade-in-image6">ZDrive แพลตฟอร์ม โดย บริษัท คอร์ แอสเซท จำกัด</b><br>
-                    <span class="fade-in-image">บริหารจัดการดิจิตอลแอสเซท จัดเก็บข้อมูลทางอิเล็กทรอนิกส์</span><br>
-                  <span class="fade-in-image2"> ด้วยการนำเทคโนโลยี ABBC ให้ตรงตามความต้องการของผู้ใช้งานกลุ่มเฉพาะ</span>
-                </p>
-                <div class="box-fund mt-5 d-flex align-items-center justify-content-center p-2 img-fluid fade-in-image6"
-                    style="height: 4rem; width: 24rem;">
-                    <span style="font-family: Anantason-Light;" class="fs-4">
-                        Discovery ZDrive.fund
-                    </span>
-                    <span class="mx-4">
-                        <img src="./images/part-1/Group (6).png" >
-                    </span>
+                <div class="animate-rotate-2 position-absolute top-50 start-50">
+                  <span class="circle rounded-circle"></span>
                 </div>
-            </div>
-        </div>
-        <!---------------------- Part 2 Vision----------------------->
-        <div class="position-relative" id="Product" >
-		<!-- animation running -->
-		<!--<div id="particles-js"></div>-->
-            <div
-                class="d-lg-inline-flex justify-content-between justify-content-lg-center justify-content-md-center col-lg-12 mb-0 bg-color" style="padding-bottom: 200px;">
-                <div class="p-2 align-self-center mx-2" >
-                    <p class="text-start fs-4 content-text " id="text-context-service-wide"
-                        style="color:rgba(120, 120, 120, 1) ;" >
-                        มอบสิทธิ์ความเป็นเจ้าของ<br><br>
-                        <b
-                            style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;line-height: 3rem;">ให้ผู้ใช้บริการแฟลตฟอร์ม</b><br><br>
-                        ร่วมสนุกกับภารกิจ รับรางวัล จากแคมเปญ<br>
-                        ด้วยการถือครองดิจิตอลแอสเซทตลอด 365 วัน
-                    </p>
+                <div class="position-absolute top-0 start-0 end-100 z-3 mt-n5 mt-md-n4 ms-md-n5">
+                  <img src="assets/svg/arrow-blue.svg" class="sway-r" width="99" height="66" alt="arrow blue">
                 </div>
-                <div class="mx-2 align-self-center d-flex justify-content-md-center">
-                    <img src="./images/part-2/Group 7420.png" alt="" class="img-fluid"
-                        style="height: auto; width: auto;" id="image2-1"><!-- id="image2-1" -->
-                </div>
-                <div class="p-2 align-self-center mx-5">
-                    <p class="text-start fs-5 " id="text-context-service-mobile">
-                    </p>
-                </div>
-            </div>
-            <div class="d-lg-inline-flex bd-highlight justify-content-md-center ustify-content-lg-center col-lg-12 mb-0 bg-color"
-                style="background-image: url(./images/part-2/bg2.png); height: 100%;padding-bottom: 300px;" id="Campaign">
-
-                <div class="p-2 align-self-center mx-3 d-flex justify-content-md-center">
-                    <img src=" ./images/part-2/Group 7421.png" alt="" class="img-fluid"
-                        style="height: auto; width: auto ;background-position: center top;background-size: 100% 100%;" id="image2-2"><!-- id="image2-2" -->
-                </div>
-                <div class="p-2 align-self-center mx-5" id="image2-2v2">
-                    <p class="text-end fs-4 content-text" id="text-context-point-mobile"
-                        style="color: rgba(120, 120, 120, 1);">
-                        ร่วมสนุกกับแคมเปญพิเศษ<br><br>
-                        <b style="color:rgba(90, 142, 248, 1); font-family: Anantason-Medium; font-size: 3rem;">สะสม
-                            Point รับของรางวัล </b> <br> และสิทธิพิเศษอื่นๆ จากบริษัท*
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!------------------ Part 3 Wallet ---------------------->
-        <div  style="height:1100px;" class="bg-color">
-            <div class="text-center" id="image3-1v2" >
-                <p class="fs-2" id="text-context-wallet-wide" style="color: rgb(120, 120, 120); font-size: 0.65rem;">Wallet
-                    Wallet ช่องทางการชำระเงินที่ปลอดภัย <br> <b class="fs-1" style="color:rgba(90, 142, 248, 1);line-height: 3rem;">สะดวก
-                        ในการเข้าใช้แพลตฟอร์ม </b>
-                    <b class="fs-3">ด้วยการเชื่อมต่อกับบริการอื่นๆอย่างมีประสิทธิภาพ </b>
-                </p>
-
-
-            </div>
-            <div class="d-flex justify-content-center zoom-in-out-box">
-                <img src="./images/part-3/Group 7427.png" class="img-fluid" id="image3-1" style="margin-left: auto;margin-right: auto;display: block;"><!-- image3-1 -->
-            </div>
-
-            <div class="text-center">
-                <p class="fs-2" id="text-context-wallet-mobile">
-                </p>
-
-            </div>
-			<div style="padding-top:100px;background-color:#f5f5f5;"></div>
-			<!--<div style="padding-top:200px;background-color:#f5f5f5;"></div>-->
-            <!------------------ Part 4 transfer ---------------------->
-			<!-- d-xl-inline-flex align-items-center justify-content-center -->
-            <div class="d-sm-flex align-items-center justify-content-center"
-                style="background:linear-gradient(180deg, #6876F0 0%, #65AFF0 100%); height: 90%;" id="tranferdiv">
-				<!-- background-image: url(./images/part-6/bg6.png);background-position: center top;background-size: 100% 100%; -->
-                <!-- background:linear-gradient(180deg, #6876F0 0%, #65AFF0 100%); height: 75%; -->
-				<div class="my-5" style="padding-top:100px;"><!-- padding-top:200px; -->
-                    <img src="./images/part-4/p4.png?v=1.1" alt="" class="img-fluid" width="90%" style="margin-left: auto;margin-right: auto;display: block;" id="network-z-drive"><!-- network-z-drive image4-1 -->
-                </div>
-                <div style="padding-top:50px;">
-                    <img src="./images/part-4/Group 7423.png" alt="" width="90%" class="img-fluid zoom-in-out-box2" id="image4-2" style="margin-left: auto;margin-right: auto;display: block;"><!-- image4-2 -->
-                </div>
-            </div>
-            <!------------------ Part 5 Content ---------------------->
-            <div class="d-flex flex-column justify-content-center bg-color col-12" style="height: 60rem;">
-                <div class="justify-content-center">
-                    <img src="./images/part-5/Group 7425.png" width="1200px" alt="" style="margin-top:0rem ;margin-left: auto;margin-right: auto;display: block;" class="img-fluid"
-                        id="image5-1"><!-- image5-1 -->
-                </div>
-                <div class="text-center mt-5" style="color:rgba(120, 120, 120, 1) ;" id="image5-1v2">
-                    <p class="fs-2">รองรับทุกอุปกรณ์การใช้งาน</p>
-                    <div class="fs-1" style="color:rgba(90, 142, 248, 1)">จัดการข้อมูลได้ทุกที่ ทุกเวลา</div>
-                    <p class="fs-3 mt-2">ตอบโจทย์ทุกความต้องการในชีวิตประจำวัน</p>
-                </div>
-            </div>
-            <!------------------ Part 6 Outro ---------------------->
-            <div class="d-flex flex-column align-items-center bg-color text-center "
-                style="background-image: url(./images/part-6/bg6.png);background-position: center top;background-size: 100% 100%;padding-bottom: 100px;">
-                <div>
-                    <img src="./images/part-6/Group 7448.png" width="75%" alt="" style="margin-top:20rem ;" class="img-fluid"
-                        id="image6-1">
-                </div>
-                <div style="height: 4rem;">
-                </div>
-                <div class="mt-4  font-responsive-1">
-                    <p class="text-white  font-responsive-1" style="font-family: Anantason-Medium;font-size: 1.2rem;">ZDrive
-                        ทางเลือกใหม่ของการร่วมแคมเปญ และรับรางวัล
-                    </p>
-                    <div class="text-white  font-responsive-1" style="font-size: 2.2rem;">
-                        จากการถือครองดิจิตอลแอสเซท</div>
-                </div>
-                <hr class="line">
-                <p class="text-white fs-4 my-3  mb-5">มาร่วมเป็น หนึ่ง ในคอมมูนิตี้ล้ำสมัย</p>
-                <div class="mt-2 component">
-                    <span class="auto-type text-white mt-3 fs-1" style="letter-spacing: 5px;"></span>
-                </div>
-            </div>
-            <!------------------------- Part 7 Footer---------------------->
-            <footer class="text-white pt-5 pb-4" style="background-color:rgba(103, 142, 241, 1);" id="contact">
-                <div class="container text-center">
-                    <div class="d-lg-inline-flex justify-content-between " style="width: 100%;">
-                        <div class="mx-1 mt-3 text-center justify-content-start">
-
-                            <img src="./images/logo/logobig.png " class="justify-content-start img-fluid d-flex"
-                                width="192px" height="39px left-173px top-3960px">
-                            <br>
-                            <p class="text-start" style="font-family: Anantason-Medium;">แพลตฟอร์มที่มอบแคมเปญสุดพิเศษ<br>
-							<span style="line-height: 2rem;">และสิทธิถือครองดิจิตอลแอสเซทให้กับผู้ใช้บริการ</span>
-                            </p>
-                        </div>
-                        <div class="mx-1 mt-3 text-start align-self-center">
-                            <p class="menu">Home<br>
-                            <p class="menu2">Product<br>
-							<p class="menu3">Campaign<br>
-                            <p class="menu4">Contact<br>
-                            </p>
-                        </div>
-                        <div class="mx-1 mt-3 text-start align-self-center">
-                            <h4 class="mb-2 font-weight-bold text-white">ติดต่อสอบถาม</h4>
-                            <h6 class=" text-white" style="font-family: Anantason-Medium;">
-                                ร่วมเป็นหนึ่งในคอมมูนิตี้ล้ำสมัย ZDrive
-                            </h6>
-                            <div class="address col-xl-12 text-start">
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <div class="text-start mt-2">
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="https://www.facebook.com/zdrive.official" target="_blank">
-                                                <img src="./images/icon/Group 7432.png" width="33" height="33" 
-                                                    fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" style="margin-right: -5px;">
-                                            </a>
-											
-                                        </li>
-										<li class="list-inline-item">
-                                            
-											<a href="https://page.line.me/zdrive" target="_blank">
-                                                <img src="./images/icon/Group 7442.png" width="33" height="33" 
-                                                    fill="currentColor" class="bi bi-line" viewBox="0 0 16 16">
-                                            </a>
-                                        </li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-6 col-md-auto position-relative">
+                <img src="assets/images/wallet-secure-payment-gateway-pink.png"
+                  class="img-fluid position-relative z-1 updown-2" alt="Wallet secure payment gateway">
+                <div class="w-100 position-absolute top-50 start-50 translate-middle">
+                  <div class="ratio ratio-1x1 mt-n4 mt-md-n5 xl-mt-0" style="transform: scale(1.6);">
+                    <div class="shape-circular-wave shape-cc shape-primary">
+                      <div class="shape-inner">
+                        <span class="shape-item shape-1"></span>
+                        <span class="shape-item shape-2"></span>
+                        <span class="shape-item shape-3"></span>
+                        <span class="shape-item shape-4"></span>
+                        <span class="shape-item shape-5"></span>
+                        <span class="shape-item shape-6"></span>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <p class="text-center mt-5 " style="font-size: 1.2vw;">Copyright © 2022 www.zdrive.fund All rights
-                    reserved.</p>
-            </footer>
+                <div class="animate-rotate-3 position-absolute top-50 start-50">
+                  <span class="circle rounded-circle"></span>
+                </div>
+                <div class="animate-rotate-4 position-absolute top-50 start-50">
+                  <span class="circle rounded-circle"></span>
+                </div>
+                <div class="position-absolute top-100 start-50 translate-middle-x z-3">
+                  <img src="assets/svg/arrow-pink.svg" class="sway-r" width="106" height="52" alt="arrow blue">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      </div>
+    </section>
+    <section class="section bg-gradient-to-b">
+      <div class="container py-md-5">
+        <div class="row align-items-center g-4 g-md-3">
+          <div class="col-xl-6 text-center z-3">
+            <div class="d-flex justify-content-center">
+              <div class="parallax" id="scene">
+                <div class="parallax-layer" data-depth="0.1">
+                  <img src="assets/images/exchange-transfer-network-1.png" class="img-fluid" alt="Exchange transfer network">
+                </div>
+                <div class="parallax-layer" data-depth="0.12">
+                  <img src="assets/images/exchange-transfer-network-2.png" class="img-fluid" alt="Exchange transfer network">
+                </div>
+                <div class="parallax-layer" data-depth="0.14">
+                  <img src="assets/images/exchange-transfer-network-3.png" class="img-fluid" alt="Exchange transfer network">
+                </div>
+                <div class="parallax-layer" data-depth="0.16">
+                  <img src="assets/images/exchange-transfer-network-4.png" class="img-fluid" alt="Exchange transfer network">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="position-relative">
+              <div class="position-relative text-center text-white z-2">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <svg class="mb-3" width="87" height="84" aria-hidden="true">
+                    <use xlink:href="assets/svg/icons.svg#icon-transfer" href="assets/svg/icons.svg#icon-transfer">
+                    </use>
+                  </svg>
+                </div>
+                <h2 class="text-2xl md-text-3xl fw-bold" data-aos="fade-up" data-aos-duration="1200">โอนแลกเปลี่ยน</h2>
+                <p class="md-text-xl" data-aos="fade-up" data-aos-duration="1400">ส่งให้ผู้ใช้บริการแพลตฟอร์ม
+                  หากัน</p>
+              </div>
+              <div class="position-absolute top-50 start-50 translate-middle w-100">
+                <div class="ratio ratio-1x1">
+                  <div class="shape-circular-wave shape-cc shape-white">
+                    <div class="shape-inner">
+                      <span class="shape-item shape-1"></span>
+                      <span class="shape-item shape-2"></span>
+                      <span class="shape-item shape-3"></span>
+                      <span class="shape-item shape-4"></span>
+                      <span class="shape-item shape-5"></span>
+                      <span class="shape-item shape-6"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section pb-0">
+      <div class="container py-md-5 text-center">
+        <img src="assets/images/supports-all-devices.png" class="img-fluid" data-aos="fade-up" data-aos-duration="1000"
+          alt="ZDrive Supports all Devices">
+        <div class="pt-5">
+          <h2 class="text-lg md-text-2xl mb-0 mb-md-3 mb-lg-4" data-aos="fade-up" data-aos-duration="1000">
+            รองรับทุกอุปกรณ์การใช้งาน
+          </h2>
+          <p class="fw-bold text-xl md-text-3xl text-primary mb-0 mb-md-3 mb-lg-4" data-aos="fade-up"
+            data-aos-duration="1200">
+            จัดการข้อมูลได้ทุกที่ ทุกเวลา</p>
+          <p class="md-text-lg lg-text-xl" data-aos="fade-up" data-aos-duration="1400">
+            ตอบโจทย์ทุกความต้องการในชีวิตประจำวัน</p>
+        </div>
 
-        <script>
-            var type = new Typed(".auto-type", {
-                strings: ["Buy&emsp;Sell&emsp;Tell&emsp;Rent"],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop: true,
-                cursorChar: '|',
-            })
-        </script>
-		<!-- partial -->
-		<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
-		<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
-		<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script>
-		<script  src="./animation.js"></script>
-		<script type="text/javascript" src="js/particles/particles.min.js"></script>
-		<script type="text/javascript" src="js/particles/main.script.js"></script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container py-md-5 ">
+        <div class="tab-content text-center">
+          <div class="service-title fade show active" id="service-title-zdrive">
+            <h2 class="fw-bold text-xl lg-text-2xl lh-base text-dark"><span class="text-primary">ZDrive</span>
+              ให้เช่าสิทธิ์ในการถือครองพื้นที่จัดเก็บ <br class="d-none d-md-inline-block">
+              โดยมี บริษัท Core Asset บริหารจัดการตลอดอายุสัญญา</h2>
+          </div>
+          <div class="service-title fade" id="service-title-zmarket">
+            <h2 class="fw-bold text-xl lg-text-2xl lh-base text-dark"><span class="text-primary">ZMarket</span>
+              พื้นที่มาร์เก็ตเพลสดิจิตอล<br class="d-none d-md-inline-block"> บริการพิเศษเข้าเล่นกิจกรรม ซื้อ ขาย แลก
+              เปลี่ยน</h2>
+          </div>
+          <div class="service-title fade" id="service-title-zquest">
+            <h2 class="fw-bold text-xl lg-text-2xl lh-base text-dark"><span class="text-primary">ZQuest</span>
+              โซเชียลคอมมูนิตี้ เล่นกิจกรรม รับชมสื่อโฆษณา<br class="d-none d-md-inline-block"> ตอบแบบสอบถาม
+              เพื่อแลกรับคะแนนสะสม</h2>
+          </div>
+          <div class="service-title fade" id="service-title-zhub">
+            <h2 class="fw-bold text-xl lg-text-2xl lh-base text-dark"><span
+                class="text-primary">ZHub</span>สร้างตัวตนมีส่วนร่วม แบ่งปันกิจกรรมบนแพลตฟอร์ม</h2>
+          </div>
+        </div>
+        <ul class="nav nav-pills my-5 gap-3 gap-lg-5 justify-content-center" id="pills-tab"
+          role="tablist">
+          <li class="nav-item pe-lg-4" role="presentation">
+            <button class="nav-link shadow text-lg md-text-xl fw-bold rounded-pill px-4 active" id="pills-zdrive-tab"
+              data-bs-toggle="pill" data-bs-target="#pills-zdrive" type="button" role="tab" aria-controls="pills-zdrive"
+              aria-selected="true">ZDrive</button>
+          </li>
+          <li class="nav-item px-lg-4" role="presentation">
+            <button class="nav-link shadow text-lg md-text-xl fw-bold rounded-pill px-4" id="pills-zmarket-tab"
+              data-bs-toggle="pill" data-bs-target="#pills-zmarket" type="button" role="tab"
+              aria-controls="pills-zmarket" aria-selected="false">Z Market</button>
+          </li>
+          <li class="nav-item px-lg-4" role="presentation">
+            <button class="nav-link shadow text-lg md-text-xl fw-bold rounded-pill px-4" id="pills-zquest-tab"
+              data-bs-toggle="pill" data-bs-target="#pills-zquest" type="button" role="tab" aria-controls="pills-zquest"
+              aria-selected="false">Z Quest</button>
+          </li>
+          <li class="nav-item px-lg-4" role="presentation">
+            <button class="nav-link shadow text-lg md-text-xl fw-bold rounded-pill px-4" id="pills-zhub-tab"
+              data-bs-toggle="pill" data-bs-target="#pills-zhub" type="button" role="tab" aria-controls="pills-zhub"
+              aria-selected="false">Z
+              Hub</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-zdrive" role="tabpanel" aria-labelledby="pills-zdrive-tab"
+            tabindex="0">
+            <div class="row g-4 g-lg-5 g-xl-4 g-xxl-5">
+              <div class="col-xl-3 order-2 order-xl-1">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 gy-3 gy-md-4 gy-lg-5">
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">ZDrive</h5>
+                      <p class="lg-text-2md fw-medium mb-0">ให้เช่าสิทธิ์ในการถือครองพื้นที่จัดเก็บ เพื่อสร้างรายได้</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Marketplace</h5>
+                      <p class="lg-text-2md fw-medium mb-0">เลือกบริการได้ตามใจ 1 GB รับ 30 คะแนน ตลอด 365 วัน</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Wallet</h5>
+                      <p class="lg-text-2md fw-medium mb-0">บริหารจัดการ รางวัล แลกคะแนน แลกรับรางวัลสุดคุ้ม</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Download</h5>
+                      <p class="lg-text-2md fw-medium mb-0">สรุปข้อมูลต่างๆ แยกประเภทเอกสาร เข้าถึงไฟล์เอกสารได้ทุกที่
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 order-1 order-xl-2">
+                <div class="d-flex h-100 align-items-center align-items-xl-start">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/_FA9XHW23Gg" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-zmarket" role="tabpanel" aria-labelledby="pills-zmarket-tab"
+            tabindex="0">
+            <div class="row g-4 g-lg-5 g-xl-4 g-xxl-5">
+              <div class="col-xl-3 order-2 order-xl-1">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 gy-3 gy-md-4 gy-lg-5">
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Upgrade Level</h5>
+                      <p class="lg-text-2md fw-medium mb-0">อัปเกรด Level ที่ ต้องการ เลือกรอบกิจกรรม
+                        ได้ตามใจ เพื่อปลดล็อคเควสรับของรางวัล</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Card Market</h5>
+                      <p class="lg-text-2md fw-medium mb-0">ชื้อ ขาย แลก เปลี่ยน Card
+                        ด้วยแต้ม คะแนนบนแพลตฟอร์ม</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Card Daily</h5>
+                      <p class="lg-text-2md fw-medium mb-0">สนุกกับกล่องสุ่ม Card ประจำวัน ลุ้นรับ Card Limited</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Mission Level</h5>
+                      <p class="lg-text-2md fw-medium mb-0">พิชิตภารกิจให้สำเร็จภายในระยะเวลาที่กำหนด
+                        รับของรางวัลตามจำนวนภารกิจที่ทำสำเร็จ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 order-1 order-xl-2">
+                <div class="d-flex h-100 align-items-center align-items-xl-start">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/RGHoq-uIMtM" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-zquest" role="tabpanel" aria-labelledby="pills-zquest-tab" tabindex="0">
+            <div class="row g-4 g-lg-5 g-xl-4 g-xxl-5">
+              <div class="col-xl-3 order-2 order-xl-1">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 gy-3 gy-md-4 gy-lg-5">
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Automation</h5>
+                      <p class="lg-text-2md fw-medium mb-0">สนุกกับเควส ประจำวัน ตามความต้องการ ร่วมทำกิจกรรม Upgrade
+                        เพื่อปลดล็อกรางวัล</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">News</h5>
+                      <p class="lg-text-2md fw-medium mb-0">อ่านข่าวสาร รับชมสื่อโฆษณาประจำวัน ทำเสร็จรับคะแนนทันที</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Question / Survey</h5>
+                      <p class="lg-text-2md fw-medium mb-0">ตอบคำถาม ให้ถูกต้องตามกิจกรรม ตอบถูก ได้รับคะแนนทันที</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Vote</h5>
+                      <p class="lg-text-2md fw-medium mb-0">กิจกรรมโหวต ยอดฮิต ทุกผลโหวตแลกรับคะแนน</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 order-1 order-xl-2">
+                <div class="d-flex h-100 align-items-center align-items-xl-start">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/PMguPkUtaDE" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-zhub" role="tabpanel" aria-labelledby="pills-zhub-tab" tabindex="0">
+            <div class="row g-4 g-lg-5 g-xl-4 g-xxl-5">
+              <div class="col-xl-3 order-2 order-xl-1">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 gy-3 gy-md-4 gy-lg-5">
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Academy community</h5>
+                      <p class="lg-text-2md fw-medium mb-0">ร่วมกับกิจกรรม และ แบ่งปันความสนุก แลกเปลี่ยนสินค้า
+                        บริการอื่นๆ</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Rank Level </h5>
+                      <p class="lg-text-2md fw-medium mb-0">สะสม Rank จัดอันดับ เพื่อรับสิทธิประโยชน์ต่างๆ</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Automate Link</h5>
+                      <p class="lg-text-2md fw-medium mb-0">สร้างตัวตนบนคอมมูนิตี้ ร่วมสร้างความสนุก
+                        เป็นส่วนหนึ่งของกิจกรรม</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex flex-column h-100 border-start border-dark ps-3 ps-xl-4">
+                      <h5 class="text-dark text-xl fw-semibold">Future Features</h5>
+                      <p class="lg-text-2md fw-medium mb-0">ปลดล็อคฟีเจอร์ ที่รองรับในอนาคต</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 order-1 order-xl-2">
+                <div class="d-flex h-100 align-items-center align-items-xl-start">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/PMguPkUtaDE?start=47" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Roadmap -->
+    <section class="section pt-0 bg-light position-relative" id="roadmap">
+      <div class="position-relative">
+        <img src="assets/svg/shape-2.svg" class="img-fluid w-100" alt="shape">
+      </div>
+      <div class="container">
+        <h2 class="fw-bold text-2xl lg-text-3xl xl-text-4xl text-primary text-center my-5" data-aos="fade-up"
+          data-aos-duration="1000">Roadmap ZDrive</h2>
+        <div class="py-5">
+          <div class="row row-cols-1 g-5">
+            <div class="col">
+              <div class="row g-3 g-md-4 g-lg-5 g-xl-0">
+                <div class="col-md-2 col-lg-2 order-lg-2">
+                  <div class="d-flex justify-content-center position-relative z-3">
+                    <div class="roadmap-number p-2 d-flex rounded-circle">
+                      <span
+                        class="inner w-100 h-100 d-flex align-items-center justify-content-center rounded-circle bg-white text-xl text-primary fw-semibold">1</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 col-lg-5 text-center order-lg-3">
+                  <img src="assets/images/zdrive-roadmap-1.png" class="img-fluid" alt="Roadmap" data-aos="zoom-in"
+                    data-aos-duration="1000">
+                </div>
+                <div class="col-8 col-md-8 col-lg-5 text-lg-end order-lg-1" data-aos="fade-left"
+                  data-aos-duration="1000" data-aos-delay="400">
+                  <h3 class="text-lg md-text-xl text-dark">ZDrive เช่าสิทธิ์การถือครองพื้นที่</h3>
+                  <p class="lg-text-lg">Core Asset มุ้งเน้นเทคโนโลยีที่เพิ่มประสิทธิภาพของยุค Digital
+                    Transformation สำหรับอุตสาหกรรม Cloud Storage เพื่อรองรับ
+                    การเติบโตและเปิดตัว ZDrive แพลตฟอร์มให้เช่าสิทธิ์ถือครองพื้น
+                    ที่จัดเก็บข้อมูลให้กลุ่มผู้ใช้บริการในระยะเวลาที่เช่าสิทธิ์บริการ</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row g-3 g-md-4 g-lg-5 g-xl-0">
+                <div class="col-md-2 col-lg-2 order-lg-2 position-relative">
+                  <div class="d-none d-md-flex h-100 position-absolute bottom-100 start-50 translate-middle-x">
+                    <span class="roadmap-arrow d-flex h-100 position-relative" data-aos="fade-down"
+                      data-aos-duration="1000"></span>
+                  </div>
+                  <div class="d-flex justify-content-center position-relative z-3">
+                    <div class="roadmap-number p-2 d-flex rounded-circle">
+                      <span
+                        class="inner w-100 h-100 d-flex align-items-center justify-content-center rounded-circle bg-white text-xl text-primary fw-semibold">2</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 col-lg-5 text-center order-lg-1">
+                  <img src="assets/images/zdrive-roadmap-2.png" class="img-fluid" alt="Roadmap" data-aos="zoom-in"
+                    data-aos-duration="1000">
+                </div>
+                <div class="col-8 col-md-8 col-lg-5 order-lg-3" data-aos="fade-right" data-aos-duration="1000"
+                  data-aos-delay="400">
+                  <h3 class="text-lg md-text-xl text-dark">ZMarket มาร์เก็ตเพลส ชื้อขาย แลกเปลี่ยน</h3>
+                  <p class="lg-text-lg">ZMarket แพลตฟอร์ม Marketplace สำหรับการซื้อ ขาย แลกเปลี่ยน
+                    รูปแบบของคะแนน ที่ใช้ในแพลตฟอร์ม ร่วมกิจกรรม แคมเปญ และ
+                    รับรางวัล เพื่อสร้างความ Loyalty ของผู้ใช้ภายใน Eco system
+                    ของตนเอง โดยใช้เทคโนโลยีในปัจจุบัน ในการรองรับผู้ใช้งาน
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row g-3 g-md-4 g-lg-5 g-xl-0">
+                <div class="col-md-2 col-lg-2 order-lg-2 position-relative">
+                  <div class="d-none d-md-flex h-100 position-absolute bottom-100 start-50 translate-middle-x">
+                    <span class="roadmap-arrow d-flex h-100 position-relative" data-aos="fade-down"
+                      data-aos-duration="1000"></span>
+                  </div>
+                  <div class="d-flex justify-content-center position-relative z-3">
+                    <div class="roadmap-number p-2 d-flex rounded-circle">
+                      <span
+                        class="inner w-100 h-100 d-flex align-items-center justify-content-center rounded-circle bg-white text-xl text-primary fw-semibold">3</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 col-lg-5 text-center order-lg-3">
+                  <img src="assets/images/zdrive-roadmap-3.png" class="img-fluid" alt="Roadmap" data-aos="zoom-in"
+                    data-aos-duration="1000">
+                </div>
+                <div class="col-8 col-md-8 col-lg-5 text-lg-end order-lg-1" data-aos="fade-left"
+                  data-aos-duration="1000" data-aos-delay="400">
+                  <h3 class="text-lg md-text-xl text-dark">ZQuest ดิจิตอล มาร์เก็ตติ้ง สมัยใหม่</h3>
+                  <p class="lg-text-lg">ZQuest แพลตฟอร์ม Social Community ที่ใช้เทคโนโลยีด้าน CRM
+                    และ Digital Marketing เพื่อเสริมศักยภาพธุรกิจ ส่งเสริมกิจกรรม
+                    การแลกรับคูปอง แต้มสะสม และนำแต้มแลกเปลี่ยนเป็นสินค้า/บริการ
+                    พร้อมส่งเสริมพันธมิตรคู่ค้า</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row g-3 g-md-4 g-lg-5 g-xl-0">
+                <div class="col-md-2 col-lg-2 order-lg-2 position-relative">
+                  <div class="d-none d-md-flex h-100 position-absolute bottom-100 start-50 translate-middle-x">
+                    <span class="roadmap-arrow d-flex h-100 position-relative" data-aos="fade-down"
+                      data-aos-duration="1000"></span>
+                  </div>
+                  <div class="d-flex justify-content-center position-relative z-3">
+                    <div class="roadmap-number p-2 d-flex rounded-circle">
+                      <span
+                        class="inner w-100 h-100 d-flex align-items-center justify-content-center rounded-circle bg-white text-xl text-primary fw-semibold">4</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 col-lg-5 text-center order-lg-1">
+                  <img src="assets/images/zdrive-roadmap-4.png" class="img-fluid" alt="Roadmap" data-aos="zoom-in"
+                    data-aos-duration="1000">
+                </div>
+                <div class="col-8 col-md-8 col-lg-5 order-lg-3" data-aos="fade-right" data-aos-duration="1000"
+                  data-aos-delay="400">
+                  <h3 class="text-lg md-text-xl text-dark">ZHub ศูนย์การเรียนรู้ สร้างเสริม คอมมูนิตี้</h3>
+                  <p class="lg-text-lg">ZHub แพลตฟอร์มเสริมศักยภาพของผู้ใช้บริการ ให้มีส่วนร่วม
+                    สนับสนุนและส่งเสริมไอเดียใหม่ๆ พร้อมทั้งเป็นศูนย์การขยายการ
+                    เข้าถึง และ พื้นที่จัดเก็บ เพื่อให้พันธมิตร ผู้ใช้บริการ สามารถ
+                    เติบโตพร้อมกับเราได้อย่างมั่นคง</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="section bg-gradient-to-b position-relative overflow-hidden">
+      <div class="d-flex col-12 col-xl-11 col-xxl-9 position-absolute top-50 start-0 translate-middle-y ms-n5">
+        <div class="ratio ratio-1x1">
+          <div class="shape-circular-wave shape-cl shape-white">
+            <div class="shape-inner">
+              <span class="shape-item shape-1"></span>
+              <span class="shape-item shape-2"></span>
+              <span class="shape-item shape-3"></span>
+              <span class="shape-item shape-4"></span>
+              <span class="shape-item shape-5"></span>
+              <span class="shape-item shape-6"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex col-12 col-xl-11 col-xxl-9 position-absolute top-50 end-0 translate-middle-y me-n5">
+        <div class="ratio ratio-1x1">
+          <div class="shape-circular-wave shape-cr shape-white">
+            <div class="shape-inner">
+              <span class="shape-item shape-1"></span>
+              <span class="shape-item shape-2"></span>
+              <span class="shape-item shape-3"></span>
+              <span class="shape-item shape-4"></span>
+              <span class="shape-item shape-5"></span>
+              <span class="shape-item shape-6"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center text-white">
+        <!-- <div class="col-xxl-11 mx-auto"> -->
+          <div class="col-3 mx-auto">
+            <img src="assets/images/logo.png" class="img-fluid mt-lg-5 mb-4 mb-lg-5" data-aos="zoom-out"
+              data-aos-duration="1000" alt="Logo ZDrive">
+          </div>
+
+          <h2 class="text-lg md-text-xl lg-text-2xl xl-text-3xl mb-4" data-aos="fade-up" data-aos-duration="1000">
+            ZDrive ทางเลือกใหม่ของการสร้างรายได้</h2>
+          <p class="text-2xl lg-text-3xl xl-text-4xl fw-bold mb-4 mb-lg-5" data-aos="fade-up" data-aos-duration="1200">
+            จากการเช่าสิทธิ์ถือครองพื้นที่จัดเก็บในยุคดิจิทัล</p>
+          <div class="opacity-50">
+            <hr class="text-white" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+          </div>
+          <p class="text-lg md-text-xl lg-text-2xl my-4 my-lg-5" data-aos="fade-up" data-aos-duration="1400">มาร่วมเป็น
+            1
+            ในคอมมูนิตี้ล้ำสมัย</p>
+          <div class="px-3">
+            <div class="row text-xl md-text-2xl xl-text-3xl fw-semibold">
+              <div class="col border-start"><span class="d-inline-block" data-aos="fade-right" data-aos-duration="1000"
+                  data-aos-delay="200">Buy</span></div>
+              <div class="col border-start"><span class="d-inline-block" data-aos="fade-right" data-aos-duration="1000"
+                  data-aos-delay="400">Sell</span></div>
+              <div class="col border-start"><span class="d-inline-block" data-aos="fade-right" data-aos-duration="1000"
+                  data-aos-delay="600">Tell</span></div>
+              <div class="col border-start border-end"><span class="d-inline-block" data-aos="fade-right"
+                  data-aos-duration="1000" data-aos-delay="800">Rent</span></div>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </section>
+    <footer class="footer text-white bg-primary pt-5" id="footer">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-6 col-xxl-7">
+            <div class="d-flex flex-column flex-md-row align-items-center gap-2 gap-md-3 mb-5">
+              <img src="assets/images/logo.png" width="96" height="96" alt="ZDrive Logo">
+              <div class="d-flex flex-column pt-1 text-center text-md-start">
+                <div class="fw-bold text-3xl lh-1">ZDrive</div>
+                <div class="fw-medium text-2md">บริการให้เช่าพื้นที่จัดเก็บข้อมูลทางอิเล็กทรอนิกส์</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xxl-5">
+            <div class="d-flex gap-5 gap-md-0 flex-column flex-md-row justify-content-between">
+              <ul class="nav flex-md-column justify-content-center">
+                <li class="nav-item">
+                  <a href="#start" class="nav-link text-2md" data-scroll>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#product" class="nav-link text-2md" data-scroll>Product</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#mission" class="nav-link text-2md" data-scroll>Mission</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#roadmap" class="nav-link text-2md" data-scroll>Roadmap</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#footer" class="nav-link text-2md" data-scroll>Contact</a>
+                </li>
+              </ul>
+              <div class="text-center text-md-start">
+                <h2 class="fw-bold text-xl lg-text-2xl">ติดต่อสอบถาม</h2>
+                <p class="fw-semibold text-2md lg-text-xl mb-0">สินค้าหรือบริการ คอร์ แอสเซท</p>
+                <p class="fw-semibold lg-text-lg">บริษัท คอร์ แอสเซท จำกัด</p>
+                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                  <a href="https://www.facebook.com/zdrive.official" target="_blank" class="d-inline-block text-white">
+                    <svg width="64" height="64" aria-hidden="true">
+                      <use xlink:href="assets/svg/icons.svg#icon-facebook" href="assets/svg/icons.svg#icon-facebook">
+                      </use>
+                    </svg>
+                  </a>
+                  <a href="https://page.line.me/zdrive" target="_blank" class="d-inline-block text-white">
+                    <svg width="64" height="64" aria-hidden="true">
+                      <use xlink:href="assets/svg/icons.svg#icon-line" href="assets/svg/icons.svg#icon-line">
+                      </use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center py-4">
+        <hr class="my-4 text-white opacity-10">
+        <span class="fw-light">Copyright © 2022 ZDrive All rights reserved.</span>
+      </div>
+    </footer>
+  </main>
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/jquery/jquery-3.6.3.min.js"></script>
+  <script src="assets/vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script src="assets/js/functions.js"></script>
+  <script>
+    AOS.init({ once: true })
+    var rellax = new Rellax('.rellax');
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
+
+    $('#pills-zdrive-tab').click(function () {
+      $('#service-title-zdrive').addClass('show active');
+      $('#service-title-zmarket').removeClass('show active');
+      $('#service-title-zquest').removeClass('show active');
+      $('#service-title-zhub').removeClass('show active');
+    })
+    $('#pills-zmarket-tab').click(function () {
+      $('#service-title-zdrive').removeClass('show active');
+      $('#service-title-zmarket').addClass('show active');
+      $('#service-title-zquest').removeClass('show active');
+      $('#service-title-zhub').removeClass('show active');
+    })
+    $('#pills-zquest-tab').click(function () {
+      $('#service-title-zdrive').removeClass('show active');
+      $('#service-title-zmarket').removeClass('show active');
+      $('#service-title-zquest').addClass('show active');
+      $('#service-title-zhub').removeClass('show active');
+    })
+    $('#pills-zhub-tab').click(function () {
+      $('#service-title-zdrive').removeClass('show active');
+      $('#service-title-zmarket').removeClass('show active');
+      $('#service-title-zquest').removeClass('show active');
+      $('#service-title-zhub').addClass('show active');
+    })
+
+  </script>
 </body>
 
 </html>
