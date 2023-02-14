@@ -39,6 +39,25 @@
 }
 .service-title {
   display: none;
+  align-items: flex-end;
+  height: 144px;
+}
+@include media-breakpoint-up(lg) {
+  .service-title {
+    height: 104px;
+  }
+}
+@include media-breakpoint-up(md) {
+  .service-title {
+    height: 80px;
+  }
+}
+.tab-content {
+  > .service-title {
+    &.active {
+      display: flex;
+    }
+  }
 }
 .nav-pills {
   .nav-link {
